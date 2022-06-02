@@ -1,0 +1,124 @@
+@media only screen and (max-width: 1024px) {
+    .a-186 {
+        width: 768px;
+    }
+    .a-188 {
+        margin: 0 30px 0 30px;
+        width: auto;
+    }
+    .a-189 {
+        font-size: 12px;
+    }
+    .a-191 {
+        width: 150px;
+        margin-top: 43px;
+    }
+    .a-192 {
+        width: 150px;
+    }
+    .h-15 {
+        margin-right: 0;
+    }
+    .h-10 {
+        margin-left: 5px;
+    }
+    .h-4 {
+        width: 120px;
+    }
+    .h-20, .a-46 {
+        font-size: 12px;
+    }
+    .h-1, .a-63, .a-28, .a-4, .a-67, .a-7, .a-85, .a-84 {
+        width: 768px;
+    }
+    .h-3 {
+        display: none;
+    }
+    .a-6 {
+        display: block;
+    }
+    .a-23 {
+        border-right: 1px solid rgb(208, 171, 18);
+    }
+    .a-48 {
+        margin: 13px 18px 5px 0;
+    }
+    .a-60 {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .a-68 {
+        margin-left: 0;
+        width: 400px;
+        font-size: 14px;
+    }
+    .a-69 {
+        width: 300px;
+    }
+    .a-64 {
+        font-size: 11px;
+    }
+    .a-73 {
+        font-size: 11px;
+    }
+    .a-30 {
+        width: 256px;
+    }
+    .a-31 {
+        width: 226px;
+        height: 145px;
+    }
+    .a-32 {
+        font-size: 12px;
+    }
+    .a-37 {
+        width: 226px;
+    }
+    .a-44 {
+        font-size: 12px;
+    }
+    .a-77 {
+        height: 30px;
+    }
+    .a-78 {
+        height: 100px;
+    }
+    .a-79 {
+        height: 35px;
+    }
+    .a-75 {
+        height: 271px;
+        width: 257px;
+    }
+    .a-74a {
+        left: -260px;
+    }
+    .a-9 {
+        border: 1px solid gainsboro;
+        border-left: none;
+        border-right: none;
+        padding: 10px 0 0 0;
+        background: rgba(255,255,255,.8);
+    }
+    .a-14 {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        margin: 10px 18px 18px 18px;
+    }
+    .a-16 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .a-17 {
+        margin: 10px;
+    }
+    .a-8 {
+        border-right: 1px solid gainsboro;
+        width: auto;
+    }
+    .a-7 {
+
+    }
+    .a-8 {
+        float: none;
+    }
+}

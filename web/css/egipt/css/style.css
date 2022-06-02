@@ -1,0 +1,30 @@
+@font-face {
+    font-family: Colus;
+    src: url("../fonts/Colus-Regular.woff");
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+.header {
+    text-align: center;
+    font-family: Colus;
+    background: url("../img/header.jpeg") center center no-repeat;
+    background-size: cover;
+    height: 731px;
+}
+    .header h1 {
+        text-transform: uppercase;
+    }
+    .header-content {
+        width: 600px;
+        max-width: 100%;
+        margin: 0px auto;
+    }
+.wrap {
+    background-color: rgba(0,0,0,0.5);
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    height: 100vw;
+}

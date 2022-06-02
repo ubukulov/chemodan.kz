@@ -1,0 +1,452 @@
+@font-face {
+    font-family: Colus;
+    src: url("/fonts/Colus-Regular.woff");
+}
+html,body {
+    overflow-x: hidden;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Colus, Robot;
+    font-size: 14px;
+    overflow-x: hidden;
+}
+.turkish_div {
+    margin-top: 125px;
+}
+.new_year {
+    text-align: left;
+}
+    .new_year p {
+        font-size: 16px;
+    }
+h6 {
+    text-align: center;
+}
+.comments {
+  width: 100%;
+  height: 550px;
+}
+.slick-prev:before {
+    font-size: 70px !important;
+    color: #00569C !important;
+    left: -50px;
+    top: -13px;
+    background: white;
+    position: absolute;
+}
+.slick-next:before {
+  font-size: 70px !important;
+    color: #00569C !important;
+    left: 0px;
+    top: 0px;
+    background: white;
+    position: absolute;
+}
+img {
+    max-width: 100%;
+}
+.row {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+p{
+    font-family: Verdana;
+    font-size: 14px;
+}
+.slick-prev:before {
+    font-size: 70px !important;
+    color: #00569C !important;
+    left: -50px;
+    top: -13px;
+    background: white;
+    position: absolute;
+}
+.slick-next:before {
+    font-size: 70px !important;
+    color: #00569C !important;
+    left: 0px;
+    top: 0px;
+    background: white;
+    position: absolute;
+}
+#wh-widget-send-button iframe {
+    margin-top: -40px;
+}
+.header-content {
+    background: rgba(0,0,0,0.3);
+    width: 100%;
+    height: 100vh;
+    color: white;
+}
+    .header_tr {
+        background: url(/img/turkish/img/header.jpeg) center center no-repeat;
+        background-size: cover;
+    }
+
+    .header-title {
+        width: 80%;
+        padding-top: 8%;
+        margin: 0px auto;
+    }
+    .header-title h4 {
+        font-family: Robot, Verdana;
+        padding-top: 10%;
+        font-size: 20px;
+    }
+    .header-btn {
+        margin-top: 10%;
+    }
+.why-select {
+    background: url(/img/turkish/img/palma.png) center center no-repeat;
+    background-size: cover;
+}
+    .why-content {
+        background-color: rgba(255,255,255,0.8);
+    }
+    .why-content .row > div {
+        height: 170px;
+    }
+    .why-title {
+        padding: 20px 10px;
+    }
+.where-go {
+    background: #f8b195;
+}
+    .where-block {
+        margin-bottom: 20px;
+    }
+    .where-pic {
+        width: 200px;
+        height: 200px;
+        max-width: 100%;
+        border-radius: 100%;
+        border: 1px solid;
+        margin: 0px auto 20px auto;
+    }
+    .where-pic img {
+        width: 200px;
+        max-width: 100%;
+    }
+    .where-block-text {
+        margin-bottom: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+        height: 145px;
+    }
+    .where-title {
+        padding: 20px 10px;
+    }
+    .where-block-btn button {
+        background: #2E7E75;
+        border-color: #2E7E75;
+        color: white;
+        margin-bottom: 10px;
+    }
+    #antalya {
+        background: url(/img/turkish/img/2.jpg) center center no-repeat;
+        background-size: cover;
+    }
+    #belek {
+        background: url(/img/turkish/img/3.png) center center no-repeat;
+        background-size: cover;
+    }
+    #alanya {
+        background: url(/img/turkish/img/4.jpg) center center no-repeat;
+        background-size: cover;
+    }
+    #bodrum {
+        background: url(/img/turkish/img/5.jpg) center center no-repeat;
+        background-size: cover;
+    }
+    #kemer {
+        background: url(/img/turkish/img/6.jpg) center center no-repeat;
+        background-size: cover;
+    }
+    #kurdashasi {
+        background: url(/img/turkish/img/7.jpg) center center no-repeat;
+        background-size: cover;
+    }
+    #marmaris {
+        background: url(/img/turkish/img/8.jpg) center center no-repeat;
+        background-size: cover;
+    }
+    #side {
+        background: url(/img/turkish/img/9.jpg) center center no-repeat;
+        background-size: cover;
+    }
+.reviews {
+    /*background: #ed7c44;*/
+}
+    .review-title {
+        padding: 20px 10px;
+    }
+    .sl1{
+        height: 180px;
+        background: url(/img/turkish/img/u8.1.jpg) center center no-repeat;
+        background-size: cover;
+    }
+    .sl2{
+        height: 180px;
+        background: url(/img/turkish/img/u4.1.jpg) center center no-repeat;
+        background-size: cover;
+    }
+    .sl3{
+        height: 180px;
+        background: url(/img/turkish/img/u6.1.jpg) center center no-repeat;
+        background-size: cover;
+    }
+
+    .review-slide {
+        width: 800px;
+        margin: 0 auto;
+        height: 250px;
+    }
+    .review-content {
+        color: white;
+        position: absolute;
+    }
+    .review-content-review p {
+        font-size: 12px;
+    }
+.main-text {
+    background: url(/img/turkish/img/bb.jpg) center center no-repeat;
+    background-size: cover;
+}
+    .main-title {
+        padding: 20px 10px;
+    }
+    .main-content {
+        background: rgba(255,255,255,0.8);
+    }
+.maps {
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+    .form-request {
+        padding: 50px 0px;
+    }
+.footer {
+    padding: 10px;
+    color: white;
+    overflow-x: hidden;
+    font-family: Verdana;
+}
+#thanks {
+    margin: 10% auto;
+}
+.copyright {
+    color: white;
+    background: #0e1b3c;
+    padding: 10px 0px;
+}
+    .copyright p {
+        font-size: 10px;
+        margin-bottom: 0px;
+    }
+.review-block {
+    border-top: 4px solid #286da8;
+}
+.review-block:before {
+    color: #286da8;
+}
+.review-block:before {
+    content: "\f10d";
+    font-family: 'Font Awesome\ 5 Free';
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    font-weight: 900;
+    font-size: 18px;
+    color: #286da8;
+    z-index: 0;
+}
+.review-block {
+    width: 100%;
+    background: #f5f5f5;
+    padding: 20px 15px 20px 25px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border-top: 4px solid #286da8;
+    position: relative;
+    margin-bottom: 25px;
+    box-shadow: 0 5px 10px rgba(0, 9, 128, 0.035), 0 7px 18px rgba(0, 9, 128, 0.05);
+}
+.review-block:after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #f5f5f5;
+    position: absolute;
+    bottom: -10px;
+    left: 55px;
+}.clients-img {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.clients-img img {
+    width: 80px !important;
+    height: 80px;
+    border-radius: 50%;
+}
+.clients-name {
+    width: 50%;
+    margin-left: 20px;
+}
+.clients-name h6 {
+    margin-bottom: 0px;
+    font-size: 18px;
+}
+.clients-name p {
+    margin-bottom: 0;
+    color: #7d7a7a;
+    font-size: 16px;
+}
+
+.sec7 .slider_other {
+  width: 900px;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.sec7 .slider_other .other {
+  text-transform: uppercase;
+  font-family: 'Caveat', cursive;
+}
+.sec7 .slider_other .other .other_title {
+  font-size: 30px;
+  line-height: 30px;
+}
+.sec7 .slider_other .other .other_sub_title {
+  font-size: 14px;
+  font-family: Verdana;
+  height: 20px;
+  margin-bottom: 30px;
+  text-transform: none;
+}
+.sec7 .slider_other .other .other_im {
+  width: 200px;
+  height: 200px;
+  max-width: 100%;
+  text-align: center;
+  color: #fff;
+  margin: 0 auto;
+}
+.sec7 .slider_other .other .im1 {
+  background: url(/img/turkish/img/other/6.jpg) center center no-repeat;
+}
+.sec7 .slider_other .other .im2 {
+  background: url(/img/turkish/img/other/1.jpg) center center no-repeat;
+}
+.sec7 .slider_other .other .im3 {
+  background: url(/img/turkish/img/other/2.jpg) center center no-repeat;
+}
+.sec7 .slider_other .other .im4 {
+  background: url(/img/turkish/img/other/4.jpg) center center no-repeat;
+}
+.sec7 .slider_other .other .im5 {
+  background: url(/img/turkish/img/other/5.jpg) center center no-repeat;
+}
+.sec7 .slider_other .other .other_div {
+  padding: 52px 10px;
+  background: rgba(0, 0, 0, 0.5);
+}
+.sec7 .slider_other .other .other_btn a {
+  width: 100%;
+  padding: 4px;
+}
+
+.modal-body {
+    font-family: Verdana;
+}
+.group-content {
+  padding: 3%;
+}
+  .group-content .col-md-6 {
+    margin-bottom: 50px;
+  }
+  .group-im {
+    background: url("/img/turkish/img/all_turkey.jpg") center center no-repeat;
+    background-size: cover;
+    height: 300px;
+    max-height: 100%;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  .group-bg {
+    background: rgba(0,0,0,0.6);
+    height: 100%;
+    padding: 12% 2%;
+    color: white;
+  }
+  .group-txt1 {
+    font-size: 20px;
+  }
+  .group-txt2 {
+    font-size: 14px;
+    font-family: Verdana;
+  }
+  .group-txt3 {
+    color: yellow;
+    font-size: 20px;
+  }
+  .group-txt3 span {
+    font-size: 14px;
+    font-family: Verdana;
+    color: white;
+  }
+  .btn_more {
+    margin-top: 20px;
+    padding: 5px 50px;
+    margin-right: 15px;
+  }
+  .group-title {
+    font-size: 30px;
+    margin-bottom: 30px;
+    /* background: url("/img/turkish/img/title_bg.png") center center no-repeat; */
+    line-height: 70px;
+    color: red;
+  }
+  .group-title-sub {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+  .group-btn {
+    position: absolute;
+    top: 220px;
+    width: 100%;
+  }
+  .group-price {
+    margin-top: 20px;
+    font-size: 20px;
+    font-family: Verdana;
+  }
+.early_booking {
+    background: url(/img/turkish/img/early_bg.jpg) center center no-repeat;
+    background-size: cover;
+}
+    .early_booking_content {
+        padding: 40px 0px;
+        background: rgba(255,255,255,0.5);
+    }
+    .early_booking_title {
+        font-size: 30px;
+        margin-bottom: 30px;
+        line-height: 30px;
+    }
+    .early_content {
+        width: 400px;
+        max-width: 100%;
+        margin: 0 auto;
+    }

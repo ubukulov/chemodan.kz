@@ -1,0 +1,121 @@
+@media (min-width: 320px) and (max-width: 767px) {
+	.header_title {
+		line-height: 55px;
+	}
+	.tailand_div {
+		margin-top: 61px;
+	}
+	.header_txt {
+		font-size: 16px;
+	}
+	.txt li {
+		line-height: 20px;
+	}
+	.title {
+		font-size: 24px;
+		color: orange;
+		line-height: 24px;
+	}
+	.header_p_title {
+		color: white;
+	    font-size: 20px;
+	    background: rgba(34,102,163, 0.4);
+	    margin-top: 0px;
+	}
+	.header_form {
+		margin-top: 40px;
+	}
+	.header_form button {
+	    width: 100%;
+	    color: white;
+	    font-size: 20px;
+	    line-height: 24px;
+	    text-transform: uppercase;
+	}
+	.btn {
+		padding: 10px 50px;
+		font-family: 'Kurale', serif;
+		background-color: orange;
+	    border-color: orange;
+	    width: 100%;
+	    color: white;
+	    font-size: 16px;
+	    line-height: 24px;
+	    text-transform: uppercase;
+	}
+	.sec2btn {
+		margin-top: 40px;
+	}
+	.sec6_im {
+	    font-size: 70px;
+	    color: #2974AD;
+	}
+	.sec6_title {
+	    font-family: Bravo,Montserrat;
+	    font-size: 40px;
+	    color: red;
+	    line-height: 35px;
+	}
+	.sec3 .title {
+	    color: #fff;
+	    font-family: 'Caveat', cursive;
+	    font-size: 30px;
+	    line-height: 30px;
+	    color: orange;
+	}
+	.comments {
+		width: 100%;
+		height: 250px;
+	}
+	.slick-prev:before {
+	    font-size: 35px !important;
+	    color: #00569C !important;
+	    left: 130px;
+	    top: 170px;
+	    background: white;
+	    position: absolute;
+	}
+	.slick-next:before {
+		font-size: 35px !important;
+	    color: #00569C !important;
+	    left: -150px;
+	    top: 170px;
+	    background: white;
+	    position: absolute;
+	}
+	.sec5 .slick-prev:before {
+		top: 140px;
+	}
+	.sec5 .slick-next:before {
+		top: 140px;
+	}
+	.sec4, .sec5 {
+		overflow-x: hidden;
+	}
+	.slide {
+		height: 300px;
+	}
+	.slide_content {
+		width: 100%;
+		height: 100%; 
+		text-align: center;
+		background: rgba(0,0,0,0.7);
+		padding: 40px 5px;
+		color: white;
+		font-family: 'Caveat', cursive;
+	}
+		.btn {
+			padding: 10px 50px;
+			font-family: 'Kurale', serif;
+			background-color: orange;
+		    border-color: orange;
+		}
+	.slide_title {
+		font-size: 30px;
+		margin-bottom: 30px;
+		line-height: 30px;
+	}
+	.sec2 {
+		padding: 20px 0px;
+	}
+}

@@ -1,0 +1,11 @@
+@font-face {
+  font-family: 'Colus-Regular';
+  src: url('Colus-Regular.eot');
+  src: url('Colus-Regular.eot?#iefix') format('embedded-opentype'),
+       url('Colus-Regular.ttf') format('truetype'),
+       url('Colus-Regular.woff') format('woff'),
+       url('Colus-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+

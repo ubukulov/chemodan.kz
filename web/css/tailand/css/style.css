@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css?family=Kurale&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Caveat&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Neucha&display=swap');
+@import url('https://fonts.googleapis.com/css?family=EB+Garamond&display=swap');
+@font-face {
+    font-family: Montserrat;
+    src: url(fonts/Montserrat-Light.woff);
+}
+@font-face {
+    font-family: Neucha;
+    src: url(fonts/Neucha-Regular.ttf);
+}
+@font-face {
+    font-family: Bravo;
+    src: url(fonts/BravoSC.woff);
+}
+body {
+	padding: 0px;
+	margin: 0px;
+	overflow-x: hidden;
+}
+.tailand_div {
+	margin-top: 125px;
+}
+section {
+	padding: 40px 0px;
+}
+.comments {
+	width: 100%;
+	height: 550px;
+}
+.tab-pane {
+	padding: 10px;
+}
+.fade {
+	opacity: 1;	
+}
+.nav > li > a {
+	font-size: 16px;
+}
+.tab-pane img {
+	width: 500px;
+	text-align: left;
+	max-width: 100%;
+	padding-right: 10px;
+	padding-bottom: 10px;
+}
+.tab-pane p {
+	font-family: Montserrat, 'EB Garamond', serif;
+	font-size: 18px;
+}
+.title {
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 45px;
+	color: orange;
+	line-height: 45px;
+	margin-bottom: 40px;
+	font-family: Neucha, cursive;
+}
+.sec1 {
+	background: url("../../../img/tailand/img/header.jpg") center center no-repeat;
+	background-size: cover;
+	padding-bottom: 0px;
+}
+	.header_title {
+		font-size: 50px;
+		text-transform: uppercase;
+		color: #F8D507;
+		font-family: Bravo,'Neucha', cursive;
+		font-weight: bold;
+		letter-spacing: 5px;
+	}
+	.header_p_title {
+		color: white;
+	    font-size: 20px;
+	    background: rgba(34,102,163, 0.4);
+	    margin-top: -10px;
+	    font-family: Neucha, cursive;
+	}
+	.header_txt {
+		font-family: Neucha, Montserrat, serif !important;
+		font-size: 23px;
+		color: #fff;
+		font-weight: 400;
+		margin-top: 10px;
+		width: 850px;
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 100%;
+		text-align: left;
+		padding: 40px 20px;
+		background: rgb(255,255,255);
+		background: linear-gradient(329deg, rgba(255,255,255,0) 0%, rgba(19,68,134,0.8) 70%);
+	}
+	.txt li {
+		line-height: 25px;
+    	margin-bottom: 10px;
+    	text-transform: uppercase;
+    	color: #FFFFFF;
+	}
+	.header_form button {
+		width: 100%;
+	}
+.sec2 {
+
+}
+	.sec2_content {
+		width: 100%;
+		margin: 0px auto;
+		max-width: 100%;
+	}
+.sec3 {
+	background: url("../../../img/tailand/img/sec3_bg.jpg") center center no-repeat;
+	background-size: cover;
+	padding: 0px;
+}
+	.sec3_content {
+		background: rgba(0,0,0,0.6);
+		padding: 40px 0px;
+	}
+	.sec3 .title {
+		color: #fff;
+		font-family: 'Caveat', cursive;
+		font-size: 30px;
+	}
+	.div_im {
+		padding: 5px;
+		background: #fff;
+		text-align: center;
+		text-transform: uppercase;
+		height: 320px;
+    	margin-bottom: 25px;
+    	-webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+		-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+		box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+	}
+	.im {
+		min-height: 250px;
+	}
+	.im_title {
+		padding-top: 8px;
+		font-family: 'Caveat', cursive;
+		font-weight: bold;
+		font-size: 18px;
+	}
+	.im1 {
+		background: url("../../../img/tailand/img/1.jpg") center center no-repeat;
+	}
+	.im2 {
+		background: url("../../../img/tailand/img/2.jpg") center center no-repeat;
+	}
+	.im3 {
+		background: url("../../../img/tailand/img/3.jpg") center center no-repeat;
+	}
+	.im4 {
+		background: url("../../../img/tailand/img/4.jpg") center center no-repeat;
+	}
+	.im5 {
+		background: url("../../../img/tailand/img/5.jpg") center center no-repeat;
+	}
+	.im6 {
+		background: url("../../../img/tailand/img/6.jpg") center center no-repeat;
+	}
+	.im7 {
+		background: url("../../../img/tailand/img/7.jpg") center center no-repeat;
+	}
+	.im8 {
+		background: url("../../../img/tailand/img/8.jpg") center center no-repeat;
+	}
+	.im9 {
+		background: url("../../../img/tailand/img/9.jpg") center center no-repeat;
+	}
+	.im10 {
+		background: url("../../../img/tailand/img/10.jpg") center center no-repeat;
+	}
+	.im11 {
+		background: url("../../../img/tailand/img/11.jpg") center center no-repeat;
+	}
+	.im12 {
+		background: url("../../../img/tailand/img/12.jpg") center center no-repeat;
+	}
+.sec4 {
+
+}
+	.sec4_content {
+		width: 100%;
+	}
+	.slide {
+		height: 500px;
+	}
+	.slider1 {
+		background: url("../../../img/tailand/img/botany_beach.jpg") center center no-repeat;
+	}
+	.slider2 {
+		background: url("../../../img/tailand/img/green_park.jpg") center center no-repeat;
+	}
+	.slider3 {
+		background: url("../../../img/tailand/img/dor_shada.jpg") center center no-repeat;
+	}
+	.slider4 {
+		background: url("../../../img/tailand/img/Marriott.jpg") center center no-repeat;
+	}
+	.slider5 {
+		background: url("../../../img/tailand/img/Pathumwan.jpg") center center no-repeat;
+	}
+	.slider6 {
+		background: url("../../../img/tailand/img/phi.jpg") center center no-repeat;
+	}
+	.slide_content {
+		width: 100%;
+		height: 100%; 
+		text-align: center;
+		background: rgba(0,0,0,0.7);
+		padding: 170px 20px;
+		color: white;
+		font-family: 'Caveat', cursive;
+	}
+		.btn {
+			padding: 10px 50px;
+			font-family: 'Kurale', serif;
+			background-color: orange;
+		    border-color: orange;
+		    color: white;
+		    font-size: 20px;
+		    line-height: 24px;
+		    text-transform: uppercase;
+		}
+	.slide_title {
+		font-size: 50px;
+		margin-bottom: 30px;
+	}
+.sec6 {
+
+}
+	.sec6, .col-md-3 {
+		margin-bottom: 20px;
+	}
+	.sec6_im {
+		font-size: 50px;
+		color: #2974AD;
+	}
+	.sec6_title {
+	    font-family: Bravo,Montserrat;
+	    font-size: 40px;
+	    color: red;
+	    line-height: 35px;
+	}
+	.sec6 button {
+		width: 300px;
+		max-width: 100%;
+	}
+	.sec2btn {
+		margin-top: 40px;
+	}
+.slick-prev:before {
+    font-size: 70px !important;
+    color: #00569C !important;
+    left: -50px;
+    top: -13px;
+    background: white;
+    position: absolute;
+}
+.slick-next:before {
+	font-size: 70px !important;
+    color: #00569C !important;
+    left: 0px;
+    top: 0px;
+    background: white;
+    position: absolute;
+}
+.main-text {
+    /*background: url(../img/bb.jpg) center center no-repeat;
+    background-size: cover;*/
+}
+    .main-title {
+        padding: 40px 10px 0px;
+    }
+    .main-content {
+        background: rgba(255,255,255,0.8);
+    }
+.maps {
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+    .form-request {
+        padding: 50px 0px;
+    }
+.footer {
+    background: #0e1b2c;
+    padding: 10px;
+    color: white;
+    overflow-x: hidden;
+    font-family: Verdana;
+}
+#thanks {
+    margin: 10% auto;
+}
+.copyright {
+    color: white;
+    background: #0e1b3c;
+    padding: 10px 0px;
+}
+    .copyright p {
+        font-size: 10px;
+        margin-bottom: 0px;
+    }

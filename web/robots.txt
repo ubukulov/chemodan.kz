@@ -1,0 +1,20 @@
+User-Agent: *
+
+Disallow: /master
+Disallow: /pages
+Disallow: /temp
+Disallow: /tsn
+Disallow: /*.php
+Disallow: /*.js
+#Disallow: /*.css
+Disallow: /*.ico
+Allow: /js/*
+Allow: /css/*
+Disallow: /bonuscard
+Disallow: /services/bonus
+Disallow: /search
+Disallow: /franchise*
+Disallow: /services/cruises
+
+Host: https://chemodan.kz/
+Sitemap: https://chemodan.kz/sitemap.xml 

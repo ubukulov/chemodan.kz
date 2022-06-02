@@ -1,0 +1,69 @@
+@media (min-width: 320px) and (max-width: 767px) {
+	.turkish_div {
+        margin-top: 60px;
+    }
+    .footer .f-text {
+        margin-bottom: 20px;
+    }
+    .footer img {
+        width: 150px;
+        max-width: 100%;
+    }
+    .group-title {
+        line-height: 30px;
+    }
+	.sec7 .slick-prev:before {
+        font-size: 35px !important;
+        color: #00569C !important;
+        left: 35px;
+        top: 0px;
+        background: white;
+        position: absolute;
+    }
+    
+    .sec7 .slick-next:before {
+        font-size: 35px !important;
+        color: #00569C !important;
+        left: -50px;
+        top: 0px;
+        background: white;
+        position: absolute;
+    }
+    .comments {
+      width: 100%;
+      height: 250px;
+    }
+    .sec5 .slick-prev:before {
+        font-size: 35px !important;
+        color: #00569C !important;
+        left: 110px;
+        top: 140px;
+        background: white;
+        position: absolute;
+    }
+    
+    .sec5 .slick-next:before {
+        font-size: 35px !important;
+        color: #00569C !important;
+        left: -120px;
+        top: 140px;
+        background: white;
+        position: absolute;
+    }
+    .group-bg {
+        padding: 5% 2%;
+    }
+    .group-price {
+        margin-top: 10px;
+    }
+    .btn_more {
+        margin-top: 10px;
+        padding: 5px 35px;
+        margin-right: 15px;
+    }
+    .group-btn {
+        position: absolute;
+        top: 190px;
+        width: 100%;
+    }
+}    
