@@ -1,0 +1,25 @@
+<?php
+
+return [
+    'Avatar' => 'Avatar',
+    'User' => 'User',
+    'Users' => 'Users',
+    'First Name' => 'First Name',
+    'Last Name' => 'Last Name',
+    'Patronymic' => 'Patronymic',
+    'Position' => 'Position',
+    'Login' => 'Login',
+    'Email' => 'Email',
+    'Phone' => 'Phone',
+    'Roles' => 'Roles',
+    'Status' => 'Status',
+    'Password' => 'Password',
+    'Password confirm' => 'Password confirm',
+    'Create user' => 'Create user',
+    'Update user' => 'Update user',
+    'No roles' => 'No roles',
+    'No status' => 'No status',
+    'Publicity' => 'Publicity',
+    'About' => 'About',
+    'Order' => 'Order',
+];

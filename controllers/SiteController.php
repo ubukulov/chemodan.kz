@@ -1,27 +1,105 @@
 <?php
 namespace app\controllers;
+
+use app\models\Menu;
 use Yii;
-use yii\filters\AccessControl;
-use yii\web\Controller;
 use yii\web\Response;
 use yii\web\UploadedFile;
-use yii\filters\VerbFilter;
-
 use app\models\LoginForm;
-use app\models\ContactForm;
-use app\models\Tour;
+use app\models\RegForm;
 use app\models\Listtours;
 use app\models\emails;
 use app\models\UploadForm;
 use app\models\Comments;
 use app\models\Payments;
+use yii\helpers\ArrayHelper;
 
 
-
-class SiteController extends Controller
+class SiteController extends BaseController
 {
-    
     public $layout = 'index';
+
+    /**
+     * @inheritdoc
+     */
+    public function actions()
+    {
+        return ArrayHelper::merge(parent::actions(), [
+            'captcha' => [
+                'class' => 'yii\captcha\CaptchaAction',
+                'fixedVerifyCode' => YII_ENV_TEST ? 'testme' : null,
+            ],
+        ]);
+    }
+
+    /**
+     * Login action.
+     *
+     * @return Response|string
+     */
+    public function actionLogin()
+    {
+        if (!Yii::$app->user->isGuest) {
+            return $this->goHome();
+        }
+
+        $model = new LoginForm();
+
+        if ($model->load(Yii::$app->request->post()) && $model->login()) {
+            return $this->goBack();
+        }
+
+        return $this->render('login', [
+            'model' => $model,
+        ]);
+    }
+
+    /**
+     * Register action.
+     *
+     * @return Response|string
+     */
+    public function actionReg()
+    {
+        if (!Yii::$app->user->isGuest) {
+            return $this->goHome();
+        }
+
+        /* @var $settingModel \app\models\Setting */
+        $settingModel = Yii::$app->get('settings')
+            ->setModel()
+            ->getSettings();
+
+        if ($settingModel->regBlock == 1) {
+            return $this->render('regBlock');
+        }
+
+        $model = new RegForm();
+
+        if ($model->load(Yii::$app->request->post()) && $model->reg()) {
+
+            if (Yii::$app->getUser()->login($model->getUser())) {
+                return $this->goHome();
+            }
+        }
+
+        return $this->render('reg', [
+            'model' => $model,
+        ]);
+    }
+
+    /**
+     * Logout action.
+     *
+     * @return Response
+     */
+    public function actionLogout()
+    {
+        Yii::$app->user->logout();
+
+        return $this->goHome();
+    }
+
     public function actionError() {
         return $this->render('error');
     }
@@ -77,7 +155,7 @@ class SiteController extends Controller
     }
     /*public function actionAdmin() {
         $this->layout = 'admin';
-        return $this->render('admin');
+        return $this->render('admin');  
     }*/
     public function actionSavesearch() {
         if (Yii::$app->request->isAjax) {
@@ -197,10 +275,7 @@ class SiteController extends Controller
 
         }
     }
-    public function actionBonuscard() {
-        
-        return $this->render('bonuscard');  
-    }
+
     public function actionCall() {
         return $this->render('call');
     }
@@ -268,6 +343,7 @@ class SiteController extends Controller
             mail($to,$subject,$message,$headers);
             return '<div class="a-148">Спасибо за вашу заявку!</div>';
         }
+
         return $this->render('index');
     }
 
@@ -988,6 +1064,3 @@ INSERT INTO `BTours` VALUES(NULL,'almaty','thailand','Fortuna Phuket - Тайл�
 
 Это хорошее место для того, чтобы приятно провести время в кругу друзей. Питаться можно в многочисленных уютных кафе и ресторанах, находящихся в этой местности. Там подают восхитительные блюда из разных стран мира.',now(),'["web/img/t37.jpg","web/img/t38.jpg","web/img/t39.jpg","web/img/t40.jpg"]','12','','0','163 125','{"website":"","phone":"+76 (34) 57 00","email":"","distance":"","wifi":"false","parking":"false","meal":"false","transport":"false","beach":"false","star":3,"map":[98.363876,7.98105]}');
 */
-
-
-?>

@@ -75,9 +75,7 @@ $from_city = '<div class="a-173" id="city_all_list">
 
 ?>
 <?php $this->beginPage() ?>
-<?php
-    //var_dump(\Yii::$app->homeUrl);
-?>
+
 <!DOCTYPE html>
 <html lang="<?= Yii::$app->language ?>">
 <head>
@@ -126,10 +124,12 @@ $from_city = '<div class="a-173" id="city_all_list">
 	
     <script src="/js/transbase.js"></script>
     <script>__jivoConfigOnLoad({"widget_id":"XuV8thGQa2","site_id":87584,"widget_color":"#4CAF50","widget_font_color":"light","widget_padding":"100","widget_height":"33","widget_orientation":"bottom","widget_mobile_orientation":"right","font_size":"16","font_family":"Verdana","font_type":"normal","locale":"ru_RU","show_rate_form":1,"hide_ad":1,"secure":0,"contacts_ask":1,"style_string":"jivo_shadow jivo_rounded_corners jivo_gradient jivo_3d_effect jivo_border","chat_mode":0?"online":"offline","geoip":"KZ;02;Almaty","botmode":false,"options":888,"hide_offline":0,"build_number":"1542007393","avatar_url":"\/\/files.jivosite.com","online_widget_label":"\u041d\u0430\u043f\u0438\u0448\u0438\u0442\u0435 \u043d\u0430\u043c, \u043c\u044b \u043e\u043d\u043b\u0430\u0439\u043d!","offline_widget_label":"\u041e\u0442\u043f\u0440\u0430\u0432\u044c\u0442\u0435 \u043d\u0430\u043c \u0441\u043e\u043e\u0431\u0449\u0435\u043d\u0438\u0435","offline_form_text":"\u041e\u0441\u0442\u0430\u0432\u044c\u0442\u0435 \u0441\u0432\u043e\u0435 \u0441\u043e\u043e\u0431\u0449\u0435\u043d\u0438\u0435 \u0432 \u044d\u0442\u043e\u0439 \u0444\u043e\u0440\u043c\u0435, \u043c\u044b \u043f\u043e\u043b\u0443\u0447\u0438\u043c \u0435\u0433\u043e \u043d\u0430 e-mail \u0438 \u043e\u0431\u044f\u0437\u0430\u0442\u0435\u043b\u044c\u043d\u043e \u043e\u0442\u0432\u0435\u0442\u0438\u043c!","bubble_color":"blue","callback_btn_color":"#44BB6E","power_button_color":"#009688","base_url":"\/\/code.jivosite.com","static_host":"cdn.jivosite.com","comet":{"host":"node146.jivosite.com"},"rules":[{"name":"\u041f\u0440\u0438\u0433\u043b\u0430\u0448\u0435\u043d\u0438\u0435 \u043d\u0430 \u0432\u0441\u0435\u0445 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0430\u0445","type":"all","enabled":true,"conditions":[{"condition":"online","value":true},{"condition":"page_url","comparator":"contain","value":"\/"},{"condition":"time_on_page","comparator":"greater_equal","value":40},{"condition":"time_after_close","comparator":"greater_equal","value":300},{"condition":"time_on_site","comparator":"greater_equal","value":30}],"commands":[{"command":"proactive","params":{"message":"\u0417\u0434\u0440\u0430\u0432\u0441\u0442\u0432\u0443\u0439\u0442\u0435! \u0425\u043e\u0442\u0438\u0442\u0435 \u043f\u0440\u043e\u0432\u0435\u0441\u0442\u0438 \u0441\u0430\u043c\u044b\u0439 \u043b\u0443\u0447\u0448\u0438\u0439 \u043e\u0442\u0434\u044b\u0445? \u0422\u043e\u0433\u0434\u0430 \u044f \u0441 \u0440\u0430\u0434\u043e\u0441\u0442\u044c\u044e \u043f\u043e\u043c\u043e\u0433\u0443 \u0412\u0430\u043c \u043f\u043e\u0434\u043e\u0431\u0440\u0430\u0442\u044c \u0442\u0443\u0440!)"}}]},{"conditions":[{"condition":"time_on_page","comparator":"greater","value":"10"},{"condition":"time_on_site","comparator":"greater","value":"120"},{"condition":"time_after_close","comparator":"greater","value":"120"},{"condition":"time_after_invitation","comparator":"greater","value":"60"}],"commands":[{"command":"show_callform","params":{"once_aday":true,"title":"\u041d\u0443\u0436\u043d\u0430 \u043f\u043e\u043c\u043e\u0449\u044c? <br>\u041c\u044b \u043f\u0435\u0440\u0435\u0437\u0432\u043e\u043d\u0438\u043c \u0447\u0435\u0440\u0435\u0437 <span style='color: #40cd72'>27<\/span> \u0441\u0435\u043a\u0443\u043d\u0434!"}}],"name":"\u0417\u0430\u043a\u0430\u0437 \u0437\u0432\u043e\u043d\u043a\u0430 \u2013 \u043f\u043e \u0442\u0430\u0439\u043c\u0435\u0440\u0443","enabled":true,"type":"all"}],"typing_insight":1,"cp_tracker_id":28589,"cp_tracker_url":"\/\/tracker.cartprotector.com\/cartprotector.js","contacts_settings":{"name":{"show":true,"required":true},"email":{"show":true,"required":true},"phone":{"show":true,"required":true}},"new_visitors_insight":1,"vi_host":"chat5-1.jivosite.com","joint":{"vb":{"botname":"www.chemodan.kz"}},"social_responce":1});</script>
-	<?php if(!$detect->isMobile()) :?>
+
+    <?php if(!$detect->isMobile()) :?>
 		<script src="//code.jivosite.com/script/geo-widget/XuV8thGQa2"></script>
 	<?php endif; ?>
-	<script src="https://openstat.net/s/2271062.js"></script>
+
+    <script src="https://openstat.net/s/2271062.js"></script>
 	<script src="https://openstat.net/cnt.js"></script>
     <link rel="stylesheet" href="https://cdn.envybox.io/widget/cbk.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -147,6 +147,7 @@ $from_city = '<div class="a-173" id="city_all_list">
     <meta property="og:image" content="https://chemodan.kz/img/12.png"/>
     <meta property="og:url" content="https://chemodan.kz/"/>
     <meta property="og:site_name" content="Сеть Турагентств Чемодан"/>
+
     <?= Html::csrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
 
@@ -265,7 +266,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
         <!--<a href="/franchise/open" target="_blank"><button class="a-276" onclick="return page.opendFran(this);">Открыть агентство</button></a>-->
         
-        <a href="/services/paybox">
+        <a href="/payment/paybox">
             <button class="a-276" onclick="return page.opendFran(this);">Оплатить онлайн</button>
         </a>
         <!--<a href="/credit/homecreditbank" target="_blank">
@@ -275,139 +276,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         <div class="h-8"><div><a id="phone_number2" href="tel:+7(727)3468220" class="no-link">+7 (727) 346 82 20</a></div><div class="a-260" onclick="return page.call();">Заказать звонок</div></div>
         <div class="h-8" style="margin-right: 15px;"><div><a id="phone_number1" href="tel:+7(700)3468220" class="no-link">+7 (700) 346 82 20</a></div><div class="a-260" onclick="return page.call();">Заказать звонок</div></div>
+
         <?php echo CurrencyWidget::widget();?>
-        <div class="a-477">
-            <div class="a-478">
-                <div class="a-479">
-                    <a href="/tours" class="h-21c"><button class="a-480">Горящие туры</button></a>
-                    <!--<div class="a-481"></div>
-                    <div class="a-482">
-                        <div class="a-483">
-                            <div class="a-484">Алматы</div>
-                            <div class="a-485">
-                                <a href="/tours/turkey" class="h-21c"><div class="a-486">Горящие туры в Турцию из Алматы</div></a>
-                                <a style='display:none' href="/tours/greece" class="h-21c"><div class="a-486">Горящие туры в Грецию из Алматы</div></a>
-                                <a href="/tours/uae" class="h-21c"><div class="a-486">Горящие туры в ОАЭ из Алматы</div></a>
-                                <a href="/tours/egypt" class="h-21c"><div class="a-486">Горящие туры в Египет из Алматы</div></a>
-                                <a href="/tours/thailand" class="h-21c"><div class="a-486">Горящие туры в Таиланд из Алматы</div></a>
-                                <a href="/tours/dominicana" class="h-21c"><div class="a-486" style="border-bottom: none;">Горящие туры в Доминикану из Алматы</div></a>
-                            </div>
-                        </div>
-                        <div class="a-483">
-                            <div class="a-484">Актау</div>
-                            <div class="a-485">
-                                <a href="/tours/turkey_aktau" class="h-21c"><div class="a-486">Горящие туры в Турцию из Актау</div></a>
-                                <a style='display:none' href="/tours/greece_aktau" class="h-21c"><div class="a-486">Горящие туры в Грецию из Актау</div></a>
-                                <a href="/tours/uae_aktau" class="h-21c"><div class="a-486">Горящие туры в ОАЭ из Актау</div></a>
-                                <a href="/tours/egypt_aktau" class="h-21c"><div class="a-486">Горящие туры в Египет из Актау</div></a>
-                                <a href="/tours/thailand_aktau" class="h-21c"><div class="a-486">Горящие туры в Таиланд из Актау</div></a>
-                                <a href="/tours/dominicana_aktau" class="h-21c"><div class="a-486" style="border-bottom: none;">Горящие туры в Доминикану из Актау</div></a>
-                            </div>
-                        </div>
-                         <div class="a-483">
-                            <a href="/alakol" class="h-21c"><div class="a-484">Алаколь</div></a>
-                        </div>
-                        <div class="a-483">
-                            <a href="/issykkul" class="h-21c"><div class="a-484">Иссык - куль</div></a>
-                        </div> 
-                    </div>-->
-                </div>
-                <div class="a-479">
-                    <a href="/countries" class="h-21c"><button class="a-480">Страны и туры</button></a>
-                    <div class="a-481"></div>
-                    <div class="a-482">
-                        <div class="a-483">
-                            <a href="/search" class="h-21c"><div class="a-484">Поиск туров</div></a>
-                        </div>
-                        <div class="a-483" style="border-bottom: none;">
-                            <a href="/countries" class="h-21c"><div class="a-484">Страны</div></a>
-                        </div>
-                        <div class="a-483" style="display: none;">
-                            <a href="/services/club" class="h-21c"><div class="a-484">Клубный отдых</div></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="a-479">
-                    <a href="/services" class="h-21c"><button class="a-480">Услуги</button></a>
-                    <div class="a-481"></div>
-                    <div class="a-482">
-                        <div class="a-483" style="display: none;">
-                            <a href="/services/hotels" class="h-21c"><div class="a-484">Подбор отеля</div></a>
-                        </div>
-                        <div class="a-483">
-                            <a href="/services/avia" class="h-21c"><div class="a-484">Авиабилеты</div></a>
-                        </div>
-                        <div class="a-483">
-                            <a href="/services/insurance" class="h-21c"><div class="a-484">Страхование</div></a>
-                        </div>
-                        <div class="a-483">
-                            <a href="/services/credit" class="h-21c"><div class="a-484">Рассрочка</div></a>
-                        </div>
-                        <div class="a-483">
-                            <a href="/services/sert" class="h-21c"><div class="a-484">Подарочный сертификат</div></a>
-                        </div>
-                        <!-- <div class="a-483">
-                            <a href="/services/bonus" class="h-21c"><div class="a-484">Бонусная карта</div></a>
-                        </div> -->
-                        <div class="a-483">
-                            <a href="/services/taxi" class="h-21c"><div class="a-484">Такси в аэропорт</div></a>
-                        </div>
-                        <div class="a-483">
-                            <a href="/services/closed" class="h-21c"><div class="a-484">Ограничение на выезд</div></a>
-                        </div>
-                        <div class="a-483">
-                            <a href="/services/pay" class="h-21c" style="border-bottom: none;"><div class="a-484">Способ оплаты</div></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="a-479">
-                    <a href="/office" class="h-21c"><button class="a-480">Компания</button></a>
-                    <div class="a-481"></div>
-                    <div class="a-482">
-                        <div class="a-483">
-                            <a href="/office/about" class="h-21c"><div class="a-484">О нас</div></a>
-                        </div>
-                        <div class="a-483">
-                            <a href="/office/team" class="h-21c"><div class="a-484">Наша команда</div></a>
-                        </div>
-                        <div class="a-483">
-                            <a href="/awards" class="h-21c"><div class="a-484">Наши награды</div></a>
-                        </div>
-                        <div class="a-483" style="border-bottom: none;">
-                            <a href="/office/vacant" class="h-21c"><div class="a-484">Вакансии</div></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="a-479">
-                    <a href="/franchise" class="h-21c"><button class="a-480">Открыть агентство</button></a>
-                    <div class="a-481"></div>
-                    <div class="a-482">
-                        <div class="a-483">
-                            <a href="/franchise" class="h-21c"><div class="a-484">Условия франчайзинга</div></a>
-                        </div>
-                        <div class="a-483" style="border-bottom: none;">
-                            <a href="https://www.afinadb.kz" target="_blank" class="h-21c"><div class="a-484">Вход для франчайзинга</div></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="a-479">
-                    <a href="/cruises" class="h-21c"><button class="a-480">Круизы</button></a>
-                    <div class="a-481"></div>
-                </div>
-                <div class="a-479">
-                    <a href="/bonuscard" class="h-21c"><button class="a-480">Бонусная карта</button></a>
-                    <div class="a-481"></div>
-                </div>
-                <div class="a-479">
-                    <a href="/reviews" class="h-21c"><button class="a-480">Отзывы</button></a>
-                    <div class="a-481"></div>
-                </div>
-                <div class="a-479">
-                    <a href="/contacts" class="h-21c"><button class="a-480">Контакты</button></a>
-                    <div class="a-481"></div>
-                </div>
-            </div>
-        </div>
+
+        <?php require_once dirname(__FILE__) . "/../partials/menu.php"; ?>
+
     </div>
 </div>
 
@@ -512,11 +385,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="a-64"><a href="/office/about" class="h-21c"><div class="a-64a">О нас</div></a></div>
                 <div class="a-64"><a href="/reviews" class="h-21c"><div class="a-64a">Отзывы</div></a></div>
                 <div class="a-64"><a href="/office" class="h-21c"><div class="a-64a">Компания</div></a></div>
-                <div class="a-64"><a href="/countries" class="h-21c"><div class="a-64a">Страны</div></a></div>
+                <div class="a-64"><a href="/countries-tours/countries" class="h-21c"><div class="a-64a">Страны</div></a></div>
             </div>
             <div class="a-62">
                 <div class="a-64"><a href="/tours" class="h-21c"><div class="a-64a">Горящие туры</div></a></div>
-                <div class="a-64"><a href="/countries" class="h-21c"><div class="a-64a">Страны и туры</div></a></div>
+                <div class="a-64"><a href="/countries-tours" class="h-21c"><div class="a-64a">Страны и туры</div></a></div>
                 <div class="a-64"><a href="/services" class="h-21c"><div class="a-64a">Услуги</div></a></div>
 
                 <div class="a-64"><a href="/contacts" class="h-21c"><div class="a-64a">Контакты</div></a></div>
