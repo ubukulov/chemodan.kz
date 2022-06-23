@@ -137,7 +137,7 @@ $this->title = 'Открыть агенство - турфирма Chemodan в �
 			<div class="at-lead">
 				<?php
 use app\components\FormFranchiseWidget;
-echo FormFranchiseWidget::widget(['title'=>'ПОЛУЧИТЬ СКИДКУ','city'=>'ГОРОД ОТКРЫТИЯ', 'id' => 'fr_chem_btn1']);
+echo FormFranchiseWidget::widget(['title'=>'ПОЛУЧИТЬ СКИДКУ','cities'=>'ГОРОД ОТКРЫТИЯ', 'id' => 'fr_chem_btn1']);
 ?>
 			</div>
 		</div>
@@ -312,7 +312,7 @@ echo FormFranchiseWidget::widget(['title'=>'ПОЛУЧИТЬ СКИДКУ','city
 	<div class="at-lead">
 		<?php
 			use app\components\LeadWidget;
-			echo LeadWidget::widget(['title'=>'ОСТАЛИСЬ ВОПРОСЫ? <br><span style="font-size: 14px;">Задайте их нашему менеджеру</span>','city'=>'ГОРОД ОТКРЫТИЯ']);
+			echo LeadWidget::widget(['title'=>'ОСТАЛИСЬ ВОПРОСЫ? <br><span style="font-size: 14px;">Задайте их нашему менеджеру</span>','cities'=>'ГОРОД ОТКРЫТИЯ']);
 		?>
 	</div>
 
@@ -546,6 +546,6 @@ echo FormFranchiseWidget::widget(['title'=>'ПОЛУЧИТЬ СКИДКУ','city
 <div class="at-lead">
 	<?php
 		use app\components\LeadWidget2;
-		echo LeadWidget2::widget(['title'=>'Получить консультации','city'=>'ГОРОД ОТКРЫТИЯ']);
+		echo LeadWidget2::widget(['title'=>'Получить консультации','cities'=>'ГОРОД ОТКРЫТИЯ']);
 	?>
 </div>

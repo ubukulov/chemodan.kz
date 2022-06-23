@@ -246,7 +246,7 @@ var page = {
 		c = b.length;
 		e = '';
 		for (d=0;d<c;d++) {
-			if (b.eq(d).attr('data-city') === a) {
+			if (b.eq(d).attr('data-cities') === a) {
 				e = b.eq(d).find('.a-35').attr('data-id');
 				break;
 			}
@@ -290,11 +290,11 @@ var page = {
 		var a,b,c,d,e,f,g,j,h,i,k,l,m,n,o,p,q,r,s,t,u,v,w,z,y,z;
 		$(".a-458").removeClass("a-458");
 		$(a).addClass("a-458");
-		b = $(a).attr('data-city');
+		b = $(a).attr('data-cities');
 		c = $(".a-30");
 		d = c.length;
 		for (e=0;e<d;e++) {
-			if (c.eq(e).attr('data-city')==b) {
+			if (c.eq(e).attr('data-cities')==b) {
 				c.eq(e).css('display','block');
 			} else c.eq(e).css('display','none');
 		}
@@ -306,11 +306,11 @@ var page = {
 		$(a).addClass("a-449");
 		b = $(a).attr('data-id');
 		$(".a-451").fadeOut(0);
-		$("#city-map-"+b).fadeIn(0);
+		$("#cities-map-"+b).fadeIn(0);
 	},
 	schemeMap: function() {
 		var a,b,c,d,e,f,g,j,h,i,k,l,m,n,o,p,q,r,s,t,u,v,w,z,y,z;
-		$(document.body).css({'overflow': 'hidden'}).append('<div class="a-117"><div class="a-119" onclick="return page.closeView();"></div><div class="a-278" style="width: 700px;"><div class="a-450">Контакты сети турагентств Чемодан в Казахстане</div><div class="a-447"><div style="margin-top: 10px;" class="a-448 a-449" data-id="0" onclick="return page.schemeMapSel(this);">Алматы</div><div class="a-448" style="margin-top: 10px;" data-id="2" onclick="return page.schemeMapSel(this);">Тараз</div><div class="a-448" style="margin-top: 10px;" data-id="3" onclick="return page.schemeMapSel(this);">Актобе</div><div style="margin-top: 10px;" class="a-448" data-id="4" onclick="return page.schemeMapSel(this);">Актау</div><div style="margin-top: 10px;" class="a-448" data-id="5" onclick="return page.schemeMapSel(this);">Нур-Султан 7</div><div style="margin-top: 10px;" class="a-448" data-id="6" onclick="return page.schemeMapSel(this);">Нур-Султан 8</div><div style="margin-top: 10px;" class="a-448" data-id="7" onclick="return page.schemeMapSel(this);">Шымкент №11</div><div style="margin-top: 10px;" class="a-448" data-id="8" onclick="return page.schemeMapSel(this);">Атырау №12</div></div> <div class="a-451" id="city-map-0">  <div class="a-452"> <div class="a-454">Телефоны</div> <div class="a-455"><div>+7 (727) 346 84 78</div><div>+7 (727) 346 84 78</div></div> <div class="a-454">Адреса в г.Алматы</div> <div class="a-455"><div>г. Алматы, ул. Шевченко 146</div><div>г. Алматы, ул. Желтоксан 159</div><div>г. Алматы, ул. Жандосова 20</div></div> <div class="a-454">Часы работы</div> <div class="a-455"><div>с 10:00 до 19:00</div></div> </div>  <div class="a-453">  <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A34176539b195f53ffa5abcc9cbd6f4c19281184a4f8da8095bd396cad6f1ae80&amp;source=constructor" width="400" height="300" frameborder="0"></iframe>  </div></div>  <div class="a-451" id="city-map-2" style="display: none;">  <div class="a-452"> <div class="a-454">Телефоны</div> <div class="a-455"><div>+7 (777) 211 83 83</div><div>+7 (777) 211 66 33</div></div> <div class="a-454">Адреса в г.Тараз</div> <div class="a-455"><div>9 мкрн дом 67</div></div> <div class="a-454">Часы работы</div> <div class="a-455"><div>с 10:00 до 19:00</div></div> </div>  <div class="a-453"> <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ae88157613806318b22b4669b11f254fe772628d4ca18bb8f9bec0b691a0676c3&amp;source=constructor" width="400" height="300" frameborder="0"></iframe> </div></div>  <div class="a-451" id="city-map-3" style="display: none;">  <div class="a-452"> <div class="a-454">Телефоны</div> <div class="a-455"><div>+7 (713) 252 51 11</div></div> <div class="a-454">Адреса в г.Актобе</div> <div class="a-455"><div>ул. Есет Батыра 116г</div></div> <div class="a-454">Часы работы</div> <div class="a-455"><div>с 10:00 до 19:00</div></div> </div>  <div class="a-453"> <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ac9f288307ce22ff90c5b1e8c92973dfeb5cbdedaed8cf26f97ae20870866abd3&amp;source=constructor" width="400" height="300" frameborder="0"></iframe> </div></div>  <div class="a-451" id="city-map-4" style="display: none;">  <div class="a-452"> <div class="a-454">Телефоны</div> <div class="a-455"><div>+7 702 191 70 55</div></div> <div class="a-454">Адреса в г.Актау</div> <div class="a-455"><div>14 мкр, Здание 58/1 БЦ Форум, Вход с торца здания</div></div> <div class="a-454">Часы работы</div> <div class="a-455"><div>с 10:00 до 19:00</div></div> </div> <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A79e7264a25222989fcd67fde44cae03112c15ecca958a86ff36a1ecd59d7bbfd&amp;source=constructor" width="400" height="300" frameborder="0"></iframe>  </div> <div class="a-451" id="city-map-5" style="display: none;">  <div class="a-452"> <div class="a-454">Телефоны</div> <div class="a-455"><div>+7 (747) 094 71 75</div></div> <div class="a-454">Адреса в г.Нур-Султан</div> <div class="a-455"><div>Ул.23-15, дом 11/3, ЖК Millennnium Park, офис Чемодан</div></div> <div class="a-454">Часы работы</div> <div class="a-455"><div>с 10:00 до 19:00</div></div> </div> <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A793f041ae8c475cf76da47c1d4fc680e2c759060f1e2f2cd163255903e8b895d&amp;source=constructor" width="400" height="300" frameborder="0"></iframe>  </div><div class="a-451" id="city-map-6" style="display: none;">  <div class="a-452"> <div class="a-454">Телефоны</div> <div class="a-455"><div>+7 (747) 094 45 02</div><div>+7 (747) 094 45 03</div><div>+7 (747) 094 45 04</div></div> <div class="a-454">Адреса в г.Нур-Султан</div> <div class="a-455"><div>БЦ Болашак, Сарыарка 3/1, офис 301/1</div></div> <div class="a-454">Часы работы</div> <div class="a-455"><div>с 10:00 до 19:00</div></div> </div> <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A28cfa7930dc612d5c8a0aed8883d01cea1c15c71261d737550ae1ab4e24f4dcc&amp;source=constructor" width="400" height="300" frameborder="0"></iframe>  </div><div class="a-451" id="city-map-7" style="display: none;">  <div class="a-452"> <div class="a-454">Телефоны</div> <div class="a-455"><div>+7 (701) 800 09 51</div><div>+7 (747) 288 94 98</div></div> <div class="a-454">Адреса в г.Шымкент</div> <div class="a-455"><div>проспект Тауке хана 60</div></div> <div class="a-454">Часы работы</div> <div class="a-455"><div>с 10:00 до 19:00</div></div> </div> <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A99b81b8c53e93422db599af3e54204fb4153f610dcbd3f37ceaabeeeb52e7ed4&amp;source=constructor" width="400" height="300" frameborder="0"></iframe>  </div> <div class="a-451" id="city-map-8" style="display: none;">  <div class="a-452"> <div class="a-454">Телефоны</div> <div class="a-455"><div>+7 (707) 877 88 55</div><div>+7 (702) 066 66 17</div><div>+7 (778) 066 66 17</div></div> <div class="a-454">Адреса в г.Атырау</div> <div class="a-455"><div>ул. Абая Кунанбаева, дом 19Б, офис №3</div></div> <div class="a-454">Часы работы</div> <div class="a-455"><div>с 10:00 до 19:00</div></div> </div> <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A3da966b318e4ccc58e52808964a0c17fd873b20686708cbab1f41bad17fd7f1c&amp;source=constructor" width="400" height="300" frameborder="0"></iframe>  </div>      </div></div>');
+		$(document.body).css({'overflow': 'hidden'}).append('<div class="a-117"><div class="a-119" onclick="return page.closeView();"></div><div class="a-278" style="width: 700px;"><div class="a-450">Контакты сети турагентств Чемодан в Казахстане</div><div class="a-447"><div style="margin-top: 10px;" class="a-448 a-449" data-id="0" onclick="return page.schemeMapSel(this);">Алматы</div><div class="a-448" style="margin-top: 10px;" data-id="2" onclick="return page.schemeMapSel(this);">Тараз</div><div class="a-448" style="margin-top: 10px;" data-id="3" onclick="return page.schemeMapSel(this);">Актобе</div><div style="margin-top: 10px;" class="a-448" data-id="4" onclick="return page.schemeMapSel(this);">Актау</div><div style="margin-top: 10px;" class="a-448" data-id="5" onclick="return page.schemeMapSel(this);">Нур-Султан 7</div><div style="margin-top: 10px;" class="a-448" data-id="6" onclick="return page.schemeMapSel(this);">Нур-Султан 8</div><div style="margin-top: 10px;" class="a-448" data-id="7" onclick="return page.schemeMapSel(this);">Шымкент №11</div><div style="margin-top: 10px;" class="a-448" data-id="8" onclick="return page.schemeMapSel(this);">Атырау №12</div></div> <div class="a-451" id="cities-map-0">  <div class="a-452"> <div class="a-454">Телефоны</div> <div class="a-455"><div>+7 (727) 346 84 78</div><div>+7 (727) 346 84 78</div></div> <div class="a-454">Адреса в г.Алматы</div> <div class="a-455"><div>г. Алматы, ул. Шевченко 146</div><div>г. Алматы, ул. Желтоксан 159</div><div>г. Алматы, ул. Жандосова 20</div></div> <div class="a-454">Часы работы</div> <div class="a-455"><div>с 10:00 до 19:00</div></div> </div>  <div class="a-453">  <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A34176539b195f53ffa5abcc9cbd6f4c19281184a4f8da8095bd396cad6f1ae80&amp;source=constructor" width="400" height="300" frameborder="0"></iframe>  </div></div>  <div class="a-451" id="cities-map-2" style="display: none;">  <div class="a-452"> <div class="a-454">Телефоны</div> <div class="a-455"><div>+7 (777) 211 83 83</div><div>+7 (777) 211 66 33</div></div> <div class="a-454">Адреса в г.Тараз</div> <div class="a-455"><div>9 мкрн дом 67</div></div> <div class="a-454">Часы работы</div> <div class="a-455"><div>с 10:00 до 19:00</div></div> </div>  <div class="a-453"> <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ae88157613806318b22b4669b11f254fe772628d4ca18bb8f9bec0b691a0676c3&amp;source=constructor" width="400" height="300" frameborder="0"></iframe> </div></div>  <div class="a-451" id="cities-map-3" style="display: none;">  <div class="a-452"> <div class="a-454">Телефоны</div> <div class="a-455"><div>+7 (713) 252 51 11</div></div> <div class="a-454">Адреса в г.Актобе</div> <div class="a-455"><div>ул. Есет Батыра 116г</div></div> <div class="a-454">Часы работы</div> <div class="a-455"><div>с 10:00 до 19:00</div></div> </div>  <div class="a-453"> <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ac9f288307ce22ff90c5b1e8c92973dfeb5cbdedaed8cf26f97ae20870866abd3&amp;source=constructor" width="400" height="300" frameborder="0"></iframe> </div></div>  <div class="a-451" id="cities-map-4" style="display: none;">  <div class="a-452"> <div class="a-454">Телефоны</div> <div class="a-455"><div>+7 702 191 70 55</div></div> <div class="a-454">Адреса в г.Актау</div> <div class="a-455"><div>14 мкр, Здание 58/1 БЦ Форум, Вход с торца здания</div></div> <div class="a-454">Часы работы</div> <div class="a-455"><div>с 10:00 до 19:00</div></div> </div> <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A79e7264a25222989fcd67fde44cae03112c15ecca958a86ff36a1ecd59d7bbfd&amp;source=constructor" width="400" height="300" frameborder="0"></iframe>  </div> <div class="a-451" id="cities-map-5" style="display: none;">  <div class="a-452"> <div class="a-454">Телефоны</div> <div class="a-455"><div>+7 (747) 094 71 75</div></div> <div class="a-454">Адреса в г.Нур-Султан</div> <div class="a-455"><div>Ул.23-15, дом 11/3, ЖК Millennnium Park, офис Чемодан</div></div> <div class="a-454">Часы работы</div> <div class="a-455"><div>с 10:00 до 19:00</div></div> </div> <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A793f041ae8c475cf76da47c1d4fc680e2c759060f1e2f2cd163255903e8b895d&amp;source=constructor" width="400" height="300" frameborder="0"></iframe>  </div><div class="a-451" id="cities-map-6" style="display: none;">  <div class="a-452"> <div class="a-454">Телефоны</div> <div class="a-455"><div>+7 (747) 094 45 02</div><div>+7 (747) 094 45 03</div><div>+7 (747) 094 45 04</div></div> <div class="a-454">Адреса в г.Нур-Султан</div> <div class="a-455"><div>БЦ Болашак, Сарыарка 3/1, офис 301/1</div></div> <div class="a-454">Часы работы</div> <div class="a-455"><div>с 10:00 до 19:00</div></div> </div> <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A28cfa7930dc612d5c8a0aed8883d01cea1c15c71261d737550ae1ab4e24f4dcc&amp;source=constructor" width="400" height="300" frameborder="0"></iframe>  </div><div class="a-451" id="cities-map-7" style="display: none;">  <div class="a-452"> <div class="a-454">Телефоны</div> <div class="a-455"><div>+7 (701) 800 09 51</div><div>+7 (747) 288 94 98</div></div> <div class="a-454">Адреса в г.Шымкент</div> <div class="a-455"><div>проспект Тауке хана 60</div></div> <div class="a-454">Часы работы</div> <div class="a-455"><div>с 10:00 до 19:00</div></div> </div> <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A99b81b8c53e93422db599af3e54204fb4153f610dcbd3f37ceaabeeeb52e7ed4&amp;source=constructor" width="400" height="300" frameborder="0"></iframe>  </div> <div class="a-451" id="cities-map-8" style="display: none;">  <div class="a-452"> <div class="a-454">Телефоны</div> <div class="a-455"><div>+7 (707) 877 88 55</div><div>+7 (702) 066 66 17</div><div>+7 (778) 066 66 17</div></div> <div class="a-454">Адреса в г.Атырау</div> <div class="a-455"><div>ул. Абая Кунанбаева, дом 19Б, офис №3</div></div> <div class="a-454">Часы работы</div> <div class="a-455"><div>с 10:00 до 19:00</div></div> </div> <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A3da966b318e4ccc58e52808964a0c17fd873b20686708cbab1f41bad17fd7f1c&amp;source=constructor" width="400" height="300" frameborder="0"></iframe>  </div>      </div></div>');
 	},
 	requestClient: function() {
 		var a,b,c,d,e,f,g,j,h,i,k,l,m,n,o,p,q,r,s,t,u,v,w,z,y,z;
@@ -443,7 +443,7 @@ var page = {
 			'leads':{
 				'name': $(".a-230").eq(0).val().trim(),
 				'phone': $(".a-230").eq(1).val().trim(),
-				'city': '',
+				'cities': '',
 				'comment':'Подбор тура --- с: '+$(".a-3a").find('span').html()+" - до: "+$(".a-3b").find('span').html()+" --- дата: "+$(".a-3c").eq(0).find('span').attr('data-day')+"/"+$(".a-3c").find('span').attr('data-month')+"/"+$(".a-3c").find('span').attr('data-year')+" --- дней: "+$(".a-3c").eq(1).find('span').html()+" --- звездность: "+$(".a-3c").eq(2).find('span').html()+" --- взрослые: "+$(".a-3c").eq(3).find('.adult').attr('data-id')+" --- дети: "+$(".a-3c").eq(3).find('.child').attr('data-id')+" --- Возрасть детей: "+page.childAge()+" --- Комментарий: "+$(".a-230a").val().trim(),
 				'tour': b,
 				'url':window.location.pathname,
@@ -586,7 +586,7 @@ var page = {
 		b = JSON.parse($(a).attr('data-id'));
 		$(".a-278").html('<div class="a-405"></div><div class="a-395" style="display: block" data-id="'+escapeHtml(JSON.stringify(b))+'"><div class="a-402">'+b.sum+'</div><div class="a-400">'+b.name+'</div><div class="a-401">'+b.to+', '+b.city+'</div></div><div class="a-395"><div class="a-396"><div class="a-397">Город вылета:</div><div class="a-398">'+b.from+'</div></div><div class="a-396"><div class="a-397">Дата вылета:</div><div class="a-398">'+b.date+'</div></div><div class="a-396"><div class="a-397">Кол-во ночей:</div><div class="a-398">'+b.day+'</div></div><div class="a-396"><div class="a-397">Питание:</div><div class="a-398">'+b.meal+'</div></div><div class="a-396"><div class="a-397">Номер:</div><div class="a-398">'+b.room+'</div></div>  </div><div class="a-392"><div class="a-393"><input type="text" placeholder="+7" maxlength="16" class="a-393a"></div><div class="a-394"><button class="a-394a" onclick="return page.saveTourist(this);">Заказать обратный звонок</button></div></div>');
 
-		//{"from":"Алматы","name":"DAYI DIAMOND SUIT HOTEL","day":16,"sum":"1359","child":0,"adult":2,"people":"Взрослые: 2","url":"","star":3,"date":"07.02","city":"ANTALYA","meal":"Все включено","operator":"tez-tour"}
+		//{"from":"Алматы","name":"DAYI DIAMOND SUIT HOTEL","day":16,"sum":"1359","child":0,"adult":2,"people":"Взрослые: 2","url":"","star":3,"date":"07.02","cities":"ANTALYA","meal":"Все включено","operator":"tez-tour"}
 
 	},
 	showFullTourInfo: function(a) {
@@ -595,7 +595,7 @@ var page = {
 		/*
 		adult: 2
 child: 0
-city: "ANTALYA"
+cities: "ANTALYA"
 date: "07.02"
 day: 16
 meal: "Все включено"
@@ -613,9 +613,9 @@ url: ""
 
 			d += '<div class="a-386" onclick="return page.buyTourist(this);" data-id="'+escapeHtml(JSON.stringify(b[e]))+'"><div class="a-387" '+(b[e].url!==''?'style="background-image: url('+b[e].url+');"':'')+'><div class="a-387a">'+b[e].date+'</div></div><div class="a-388"><button class="a-388a">Цена '+b[e].sum+'</button><div class="a-389"><div class="a-389a">'+b[e].name+'</div><div class="a-389b "><div class="a-389b'+b[e].star+'"></div></div></div> <div class="a-390"> <div class="a-391"><div class="a-391a"></div><div class="a-391b">'+b[e].day+' ночей</div></div><div class="a-391"><div class="a-391a" style="background-image: url(/web/img/meal_round_yellow.svg)"></div><div class="a-391b">'+b[e].meal+'</div></div><div class="a-391" style="border:none;"><div class="a-391a" style="background-image: url(/web/img/people_round_yellow.svg)"></div><div class="a-391b">'+b[e].people+'</div></div> </div> </div></div>';
 
-			//{"day":15,"sum":"1376","child":0,"adult":2,"people":"Взрослые: 2","url":"https://s.tez-tour.com/hotel/671/z1__17__4899_small.jpg","star":4,"date":"09.02","city":"ANTALYA","meal":"Завтрак и ужин","operator":"tez-tour"}
+			//{"day":15,"sum":"1376","child":0,"adult":2,"people":"Взрослые: 2","url":"https://s.tez-tour.com/hotel/671/z1__17__4899_small.jpg","star":4,"date":"09.02","cities":"ANTALYA","meal":"Завтрак и ужин","operator":"tez-tour"}
 
-			//{"day":16,"sum":"1360","child":0,"adult":2,"people":"Взрослые: 2","url":"","star":3,"date":"07.02","city":"ANTALYA","meal":"Все включено","operator":"tez-tour"}
+			//{"day":16,"sum":"1360","child":0,"adult":2,"people":"Взрослые: 2","url":"","star":3,"date":"07.02","cities":"ANTALYA","meal":"Все включено","operator":"tez-tour"}
 
 		}
 
@@ -657,8 +657,8 @@ url: ""
 			$(a).attr('data-status','close').find('div').fadeIn(0).end().find('span').fadeOut(0);
 			b = {
 				'chemodan_search': {
-					'from': $("#start-city").attr('data-id'),
-					'to': $("#end-city").attr('data-id'),
+					'from': $("#start-cities").attr('data-id'),
+					'to': $("#end-cities").attr('data-id'),
 					'start-date': $("#search-date").attr('data-startdate'),
 					'end-date': $("#search-date").attr('data-enddate'),
 					'night': $("#search-night").attr('data-id'),
@@ -864,8 +864,8 @@ url: ""
 			'leads':{
 				'name': $(".a-192").eq(0).val().trim(),
 				'phone': $(".a-192").eq(1).val().trim(),
-				'city': $(".a-192").eq(2).val().trim(),
-				'comment':((window.location.pathname=='/franchise'||window.location.pathname=='/franchise/open')?'Франшиза':'Тур: '+b)+', city: '+$(".a-192").eq(2).val().trim(),
+				'cities': $(".a-192").eq(2).val().trim(),
+				'comment':((window.location.pathname=='/franchise'||window.location.pathname=='/franchise/open')?'Франшиза':'Тур: '+b)+', cities: '+$(".a-192").eq(2).val().trim(),
 				'tour': b,
 				'url':window.location.pathname,
 				'type':0
@@ -1000,7 +1000,7 @@ url: ""
 				'name': $(".a-192").eq(0).val().trim(),
 				'phone': $(".a-192").eq(1).val().trim(),
 				'city': $(".a-192").eq(2).val().trim(),
-				'comment':'Тур: '+b+', city: '+$(".a-192").eq(2).val().trim(),
+				'comment':'Тур: '+b+', cities: '+$(".a-192").eq(2).val().trim(),
 				'tour': b,
 				'url':window.location.pathname,
 				'type':4,
@@ -1013,7 +1013,7 @@ url: ""
 				'name': $(".a-192").eq(0).val().trim(),
 				'phone': $(".a-192").eq(1).val().trim(),
 				'city': '',//$(".a-192").eq(2).val().trim(),
-				'comment':((window.location.pathname=='/franchise'||window.location.pathname=='/franchise/open')?'Франшиза':'Тур: '+b)+', city: '+$(".a-192").eq(2).val().trim(),
+				'comment':((window.location.pathname=='/franchise'||window.location.pathname=='/franchise/open')?'Франшиза':'Тур: '+b)+', cities: '+$(".a-192").eq(2).val().trim(),
 				'tour': b,
 				'url':window.location.pathname,
 				'type':4,
@@ -1053,7 +1053,7 @@ url: ""
 				'name': $(".a-192").eq(0).val().trim(),
 				'phone': $(".a-192").eq(1).val().trim(),
 				'city': $(".a-192").eq(2).val().trim(),
-				'comment':'Тур: '+b+', city: '+$(".a-192").eq(2).val().trim(),
+				'comment':'Тур: '+b+', cities: '+$(".a-192").eq(2).val().trim(),
 				'tour': b,
 				'url':window.location.pathname,
 				'type':4,
@@ -1066,7 +1066,7 @@ url: ""
 				'name': $(".a-192").eq(0).val().trim(),
 				'phone': $(".a-192").eq(1).val().trim(),
 				'city': '',//$(".a-192").eq(2).val().trim(),
-				'comment':((window.location.pathname=='/franchise'||window.location.pathname=='/franchise/open')?'Франшиза':'Тур: '+b)+', city: '+$(".a-192").eq(2).val().trim(),
+				'comment':((window.location.pathname=='/franchise'||window.location.pathname=='/franchise/open')?'Франшиза':'Тур: '+b)+', cities: '+$(".a-192").eq(2).val().trim(),
 				'tour': b,
 				'url':window.location.pathname,
 				'type':4,
@@ -1108,7 +1108,7 @@ url: ""
 				'name': $("#first_name1").val().trim(),
 				'phone': $("#phone_number1").val().trim(),
 				'city': $(".a-192").eq(2).val().trim(),
-				'comment':'Тур: '+b+', city: '+$(".a-192").eq(2).val().trim(),
+				'comment':'Тур: '+b+', cities: '+$(".a-192").eq(2).val().trim(),
 				'tour': b,
 				'url':window.location.pathname,
 				'type':4,
@@ -1122,7 +1122,7 @@ url: ""
 				'phone': $("#phone_number1").val().trim(),
 				'email': $("#email1").val().trim(),
 				'city': '',//$(".a-192").eq(2).val().trim(),
-				'comment':((window.location.pathname=='/franchise'||window.location.pathname=='/franchise/open')?'Франшиза, (запрос от "Остались вопросы?")':'Тур: '+b)+', city: '+$(".a-192").eq(2).val().trim(),
+				'comment':((window.location.pathname=='/franchise'||window.location.pathname=='/franchise/open')?'Франшиза, (запрос от "Остались вопросы?")':'Тур: '+b)+', cities: '+$(".a-192").eq(2).val().trim(),
 				'tour': b,
 				'url':window.location.pathname,
 				'type':4,
@@ -1164,7 +1164,7 @@ url: ""
 				'name': $("#first_name2").val().trim(),
 				'phone': $("#phone_number2").val().trim(),
 				'city': $(".a-192").eq(2).val().trim(),
-				'comment':'Тур: '+b+', city: '+$(".a-192").eq(2).val().trim(),
+				'comment':'Тур: '+b+', cities: '+$(".a-192").eq(2).val().trim(),
 				'tour': b,
 				'url':window.location.pathname,
 				'type':4,
@@ -1178,7 +1178,7 @@ url: ""
 				'phone': $("#phone_number2").val().trim(),
 				'email': $("#email2").val().trim(),
 				'city': '',//$(".a-192").eq(2).val().trim(),
-				'comment':((window.location.pathname=='/franchise'||window.location.pathname=='/franchise/open')?'Франшиза, (запрос от "Получить консультации")':'Тур: '+b)+', city: '+$(".a-192").eq(2).val().trim(),
+				'comment':((window.location.pathname=='/franchise'||window.location.pathname=='/franchise/open')?'Франшиза, (запрос от "Получить консультации")':'Тур: '+b)+', cities: '+$(".a-192").eq(2).val().trim(),
 				'tour': b,
 				'url':window.location.pathname,
 				'type':4,

@@ -108,11 +108,11 @@ $kompas = json_decode(file_get_contents('http://online.kompastour.kz/export/defa
 
 		foreach ($kompas['TheBest_TOWNFROMS'] as &$val) $out[ cityNames($val['name']) ][] = ['selfie', $val];
 
-		$city = $turkey = '';
+		$cities = $turkey = '';
 		$i = 0;
 
 		foreach ($out as $key => $value) {
-			$city .= '<div class="a-15 '.($i===0?'a-15a':'').'">'.$key.'</div>';
+			$cities .= '<div class="a-15 '.($i===0?'a-15a':'').'">'.$key.'</div>';
 			
 			foreach ($value as $k=>$v) {
 

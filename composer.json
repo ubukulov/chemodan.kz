@@ -24,7 +24,8 @@
         "itstructure/yii2-multi-format-uploader": "~3.2.4",
         "itstructure/yii2-sitemap-generator": "~1.0.0",
         "itstructure/yii2-rbac-module": "~3.0.4",
-        "mihaildev/yii2-ckeditor": "^1.0"
+        "mihaildev/yii2-ckeditor": "^1.0",
+        "kartik-v/yii2-widget-fileinput": "^1.1"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",

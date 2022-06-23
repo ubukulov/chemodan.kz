@@ -4,6 +4,7 @@
 namespace app\controllers;
 
 use app\models\Menu;
+use app\models\SiteSettings;
 use yii\web\Controller;
 class BaseController extends Controller
 {
@@ -12,6 +13,7 @@ class BaseController extends Controller
     public function __construct($id, $module, $config = [])
     {
         $menus = Menu::find()->where(['publish' => 1])->all();
+        $settings = SiteSettings::find()->where(['id' => 1])->one();
         $arrMenu = [];
         foreach ($menus as $menu) {
             if($menu->parent_id == 0) {
@@ -30,6 +32,7 @@ class BaseController extends Controller
         }
 
         $this->view->params['menus'] = $arrMenu;
+        $this->view->params['settings'] = $settings;
         parent::__construct($id, $module, $config);
 
     }

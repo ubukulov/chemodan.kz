@@ -127,4 +127,28 @@ return [
             'portfolio' => 'portfolio.php',
         ],
     ],
+    'cities*' => [
+        'class' => 'yii\i18n\PhpMessageSource',
+        'fileMap' => [
+            'portfolio' => 'cities.php',
+        ],
+    ],
+    'offices*' => [
+        'class' => 'yii\i18n\PhpMessageSource',
+        'fileMap' => [
+            'portfolio' => 'offices.php',
+        ],
+    ],
+    'partners*' => [
+        'class' => 'yii\i18n\PhpMessageSource',
+        'fileMap' => [
+            'portfolio' => 'partners.php',
+        ],
+    ],
+    'ssettings*' => [
+        'class' => 'yii\i18n\PhpMessageSource',
+        'fileMap' => [
+            'portfolio' => 'ssettings.php',
+        ],
+    ],
 ];

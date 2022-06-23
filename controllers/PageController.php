@@ -3,9 +3,11 @@
 
 namespace app\controllers;
 
+use app\models\LoginForm;
 use app\models\Menu;
 use Yii;
 use yii\web\NotFoundHttpException;
+use app\models\Office;
 
 class PageController extends BaseController
 {
@@ -21,24 +23,20 @@ class PageController extends BaseController
         $alias = $request->get('alias');
         $sub = $request->get('sub');
 
-        if($alias == 'reviews') {
-            return $this->render('reviews');
-        }
+        if($sub == 'login') {
+            if (!Yii::$app->user->isGuest) {
+                return $this->goHome();
+            }
 
-        if($alias == 'tours') {
-            return $this->render('tours');
-        }
+            $model = new LoginForm();
 
-        if($alias == 'contacts') {
-            return $this->render('contacts');
-        }
+            if ($model->load(Yii::$app->request->post()) && $model->login()) {
+                return $this->goBack();
+            }
 
-        if(($alias == 'countries-tours') && (empty($sub))) {
-            return $this->render('countries');
-        }
-
-        if($sub == 'countries') {
-            return $this->render('countries');
+            return $this->render('login', [
+                'model' => $model,
+            ]);
         }
 
         if(empty($sub)) {
@@ -49,6 +47,31 @@ class PageController extends BaseController
             $model = Menu::find()->where([
                 'alias' => $sub
             ])->one();
+        }
+
+        if($alias == 'reviews' && empty($sub)) {
+            return $this->render('reviews');
+        }
+
+        if($alias == 'reviews' && $sub == 'video-reviews') {
+            return $this->render('video-reviews', compact('model'));
+        }
+
+        if($alias == 'tours') {
+            return $this->render('tours');
+        }
+
+        if($alias == 'contacts') {
+            $offices = Office::find()->where(['publish' => 1])->all();
+            return $this->render('contacts', compact('offices'));
+        }
+
+        if(($alias == 'countries-tours') && (empty($sub))) {
+            return $this->render('countries');
+        }
+
+        if($sub == 'countries') {
+            return $this->render('countries');
         }
 
         if(null === $model) {

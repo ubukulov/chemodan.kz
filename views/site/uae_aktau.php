@@ -5,7 +5,7 @@ $this->registerMetaTag(['name' => 'description', 'content' => 'ГОРЯЩИЕ Т
 $this->title = 'Горящие туры в Эмираты из Актау - Турфирма Chemodan в Казахстане';
 ?>
 <div class="a-185 a-185f"><div class="a-95 a-89b"></div></div><div class="a-86a"><h1 class="a-94" style="margin-bottom: 30px;">ГОРЯЩИЕ ТУРЫ В ЭМИРАТЫ ИЗ АКТАУ</h1>
-<div class="a-423" id="uae"><?php echo HotTours::widget(['type'=>1,'country'=>11,'city'=>2]);?></div>
+<div class="a-423" id="uae"><?php echo HotTours::widget(['type'=>1,'country'=>11,'cities'=>2]);?></div>
 <div class="a-290" style="margin-top: 50px;">	
 	<iframe id="triphacker_fr" src="https://triphacker.kz/widget" style="border:0; height: 500px; border: 0; width: 100%;"></iframe>
 </div>

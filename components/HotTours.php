@@ -13,7 +13,7 @@ class HotTours extends Widget {
 		$city_ = '';
 
 		if ($this->country!=='') $country_ = 'country='.$this->country;
-		if ($this->city!=='') $city_ = 'city='.$this->city;
+		if ($this->city!=='') $city_ = 'cities='.$this->city;
 
 		$url = 'https://old.afinadb.kz/export.php?'.$country_.'&'.$city_;
 		$ch = curl_init();
@@ -29,15 +29,15 @@ class HotTours extends Widget {
 			$city_l = [];
 			$cons_city = 'Алматы';
 			foreach ($res as $k=>$v) {
-				$city_l[] = $v['city'];
+				$city_l[] = $v['cities'];
 				$data = ['date'=>$v['title'],'sum'=>$v['price'],'txt'=>$v['text'],'img'=>$v['url'],'country'=>$v['country']];
-				$out .= '<div class="a-30" style="height: 370px;" data-id="'.$v['id'].'" data-city="'.$v['city'].'" '.($v['city']!=$cons_city?'style="display: none;"':'').'><div class="a-31" style="background-image: url('.$v['url'].')"><div class="a-38">'.$v['country'].'</div><div class="a-38a">- '.$v['sale'].'%</div><div class="a-38b">'.( $v['date_from']!=0?('Осталось '.$v['date_from'].' '.($v['date_from']==1?'День':(($v['date_from']==2||$v['date_from']==3||$v['date_from']==4)?'Дня':'Дней'))):'Успейте сегодня' ).'</div></div><div class="a-32"><span class="a-456">'.$this->softTrim($v['title'],70).'</span><br><span class="a-457">'.$this->softTrim($v['text'],130).'</span></div><div class="a-35" onclick="return page.tourViewSel(this);" data-id="'.htmlspecialchars(json_encode($data)).'">'.$v['price'].'</div>';
+				$out .= '<div class="a-30" style="height: 370px;" data-id="'.$v['id'].'" data-cities="'.$v['cities'].'" '.($v['cities']!=$cons_city?'style="display: none;"':'').'><div class="a-31" style="background-image: url('.$v['url'].')"><div class="a-38">'.$v['country'].'</div><div class="a-38a">- '.$v['sale'].'%</div><div class="a-38b">'.( $v['date_from']!=0?('Осталось '.$v['date_from'].' '.($v['date_from']==1?'День':(($v['date_from']==2||$v['date_from']==3||$v['date_from']==4)?'Дня':'Дней'))):'Успейте сегодня' ).'</div></div><div class="a-32"><span class="a-456">'.$this->softTrim($v['title'],70).'</span><br><span class="a-457">'.$this->softTrim($v['text'],130).'</span></div><div class="a-35" onclick="return page.tourViewSel(this);" data-id="'.htmlspecialchars(json_encode($data)).'">'.$v['price'].'</div>';
 				$out .= '<div class="home_credit_btn" onclick="return page.tourCredit(this);" data-id="'.htmlspecialchars(json_encode($data)).'">Купить с рассрочкой</div></div>';
 			}
 			$city_l = array_unique($city_l);
 			$city_m = '';
 			foreach($city_l as $k=>$v) {
-				$city_m .= '<div class="a-26 '.($v===$cons_city?'a-458':'').'" onclick="return page.selcityHT(this);" data-city="'.$v.'">'.$v.'</div>';
+				$city_m .= '<div class="a-26 '.($v===$cons_city?'a-458':'').'" onclick="return page.selcityHT(this);" data-cities="'.$v.'">'.$v.'</div>';
 			}
 
 			return json_encode([$city_m,$out]);
@@ -45,7 +45,7 @@ class HotTours extends Widget {
 		} else {
 			foreach ($res as $k=>$v) {
 				$data = ['date'=>$v['title'],'sum'=>$v['price'],'txt'=>$v['text'],'img'=>$v['url'],'country'=>$v['country']];
-				$out .= '<div class="a-30" data-id="'.$v['id'].'" data-city="'.$v['city'].'"><div class="a-31" style="background-image: url('.$v['url'].')"><div class="a-38">'.$v['country'].'</div><div class="a-38a">- '.$v['sale'].'%</div><div class="a-38b">'.( $v['date_from']!=0?('Осталось '.$v['date_from'].' '.($v['date_from']==1?'День':(($v['date_from']==2||$v['date_from']==3||$v['date_from']==4)?'Дня':'Дней'))):'Успейте сегодня' ).'</div></div><div class="a-32"><span class="a-456">'.$this->softTrim($v['title'],70).'</span><br><span class="a-457">'.$this->softTrim($v['text'],130).'</span></div><div class="a-35" onclick="return page.tourViewSel(this);" data-id="'.htmlspecialchars(json_encode($data)).'">'.$v['price'].'</div></div>';
+				$out .= '<div class="a-30" data-id="'.$v['id'].'" data-cities="'.$v['cities'].'"><div class="a-31" style="background-image: url('.$v['url'].')"><div class="a-38">'.$v['country'].'</div><div class="a-38a">- '.$v['sale'].'%</div><div class="a-38b">'.( $v['date_from']!=0?('Осталось '.$v['date_from'].' '.($v['date_from']==1?'День':(($v['date_from']==2||$v['date_from']==3||$v['date_from']==4)?'Дня':'Дней'))):'Успейте сегодня' ).'</div></div><div class="a-32"><span class="a-456">'.$this->softTrim($v['title'],70).'</span><br><span class="a-457">'.$this->softTrim($v['text'],130).'</span></div><div class="a-35" onclick="return page.tourViewSel(this);" data-id="'.htmlspecialchars(json_encode($data)).'">'.$v['price'].'</div></div>';
 			}
 			return $out;
 		}

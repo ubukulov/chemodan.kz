@@ -15,6 +15,7 @@ if($geoPlugin_array['geoplugin_city'] == "Almaty") {
   $title = 'Нур-Султан';
 }*/
 $title = 'Алматы';
+$settings = $this->params['settings'];
 
 $from_country_list = '<div class="a-173" id="to_all_list">
 <div class="a-174" onclick="return page.slCountryTo(this)" data-id="-">Выберите страну</div>
@@ -259,9 +260,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
         <div class="h-10">
-            <a id="main_whatsapp" href="http://whatsap.me/chemodan_site/" target="_blank" rel="nofollow"><div class="h-11"></div></a>
-            <a id="main_instagram" href="https://www.instagram.com/chemodan_kz/" target="_blank" rel="nofollow"><div class="h-12"></div></a>
-            <a id="main_telegram" href="https://t.me/chemodan_kz" target="_blank" rel="nofollow"><div class="h-13"></div></a>
+            <a id="main_whatsapp" href="<?=$settings->whatsapp;?>" target="_blank" rel="nofollow"><div class="h-11"></div></a>
+            <a id="main_instagram" href="<?=$settings->instagram;?>" target="_blank" rel="nofollow"><div class="h-12"></div></a>
+            <a id="main_telegram" href="<?=$settings->telegram;?>" target="_blank" rel="nofollow"><div class="h-13"></div></a>
             <a href="mailto:info@chemodan.kz"><div class="a-259">info@chemodan.kz</div></a>
         </div>
         <!--<a href="/franchise/open" target="_blank"><button class="a-276" onclick="return page.opendFran(this);">Открыть агентство</button></a>-->
@@ -274,8 +275,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </a>-->
         
 
-        <div class="h-8"><div><a id="phone_number2" href="tel:+7(727)3468220" class="no-link">+7 (727) 346 82 20</a></div><div class="a-260" onclick="return page.call();">Заказать звонок</div></div>
-        <div class="h-8" style="margin-right: 15px;"><div><a id="phone_number1" href="tel:+7(700)3468220" class="no-link">+7 (700) 346 82 20</a></div><div class="a-260" onclick="return page.call();">Заказать звонок</div></div>
+        <div class="h-8"><div><a id="phone_number2" href="tel:<?=$settings->phone2;?>" class="no-link"><?=$settings->phone2;?></a></div><div class="a-260" onclick="return page.call();">Заказать звонок</div></div>
+        <div class="h-8" style="margin-right: 15px;"><div><a id="phone_number1" href="tel:<?=$settings->phone1;?>" class="no-link"><?=$settings->phone1;?></a></div><div class="a-260" onclick="return page.call();">Заказать звонок</div></div>
 
         <?php echo CurrencyWidget::widget();?>
 
@@ -405,11 +406,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="a-248">
             <div class="a-249">
                 <div class="a-250"><i class="material-icons">location_on</i></div>
-                <div class="a-251" onclick="return page.viewMap(this);" data-url="http://widgets.2gis.com/widget?type=firmsonmap&options=%7B%22pos%22%3A%7B%22lat%22%3A43.24428052284529%2C%22lon%22%3A76.9407320022583%2C%22zoom%22%3A16%7D%2C%22opt%22%3A%7B%22city%22%3A%22almaty%22%7D%2C%22org%22%3A%2270000001031375376%22%7D">г. Алматы, ул. Желтоксан 159</div>
+                <div class="a-251" onclick="return page.viewMap(this);" data-url="<?=$settings->address1_url;?>"><?=$settings->address1;?></div>
             </div>
             <div class="a-249">
                 <div class="a-250"><i class="material-icons">location_on</i></div>
-                <div class="a-251" onclick="return page.viewMap(this);" data-url="http://widgets.2gis.com/widget?type=firmsonmap&options=%7B%22pos%22%3A%7B%22lat%22%3A43.23483890103855%2C%22lon%22%3A76.90738677978517%2C%22zoom%22%3A16%7D%2C%22opt%22%3A%7B%22city%22%3A%22almaty%22%7D%2C%22org%22%3A%2270000001027721754%22%7D">г. Алматы, ул. Жандосова 20</div>
+                <div class="a-251" onclick="return page.viewMap(this);" data-url="<?=$settings->address2_url;?>"><?=$settings->address2;?></div>
             </div>
         </div>
         <!--<div class="a-300"><a href="https://metrika.yandex.ru/stat/?id=29623905&amp;from=informer"

@@ -1,3 +1,6 @@
+<?php
+$detect = new Mobile_Detect;
+?>
 <link rel="stylesheet" type="text/css" href="/css/slick.min.css">
 <link rel="stylesheet" type="text/css" href="/css/slick-theme.min.css">
 

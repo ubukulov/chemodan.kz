@@ -13,11 +13,12 @@ use app\models\UploadForm;
 use app\models\Comments;
 use app\models\Payments;
 use yii\helpers\ArrayHelper;
+use app\models\Office;
+use app\models\Partner;
 
 
 class SiteController extends BaseController
 {
-    public $layout = 'index';
 
     /**
      * @inheritdoc
@@ -116,7 +117,7 @@ class SiteController extends BaseController
         return '
         <script type="text/javascript" src="https://ui.sletat.ru/module-5.0/app.js" charset="utf-8"></script>
 <script type="text/javascript">sletat.createModule5(\'Search\', {
-  city              : 1312,
+  cities              : 1312,
   files             : ["https://ui.sletat.ru/module-5.0/theme/dream_dec2015.min.css"],
   currency          : "KZT",
   usePricePerson    : true,
@@ -294,7 +295,7 @@ class SiteController extends BaseController
             $model->num = $arr['id'];
             $model->name = $arr['name'];
             $model->phone = $arr['phone'];
-            $model->city = $arr['city'];
+            $model->city = $arr['cities'];
             $model->insert();
             return '';
         }
@@ -311,7 +312,7 @@ class SiteController extends BaseController
             $txt = 'Ф.И.О. - '.$arr['name'].'\r\n';
             $txt .= 'Телефон - '.$arr['phone'].'\r\n';
             $txt .= 'Email - '.$arr['email'].'\r\n';
-            $txt .= 'City - '.$arr['city'].'\r\n';
+            $txt .= 'City - '.$arr['cities'].'\r\n';
     
             $message = '<html>
                 <head>
@@ -330,7 +331,7 @@ class SiteController extends BaseController
                 <td colspan="2">Email</td><td>'.$arr['email'].'</td>
                 </tr>
                 <tr>
-                <td colspan="2">City</td><td>'.$arr['city'].'</td>
+                <td colspan="2">City</td><td>'.$arr['cities'].'</td>
                 </tr>
                 </table>
                 </body>
@@ -344,7 +345,10 @@ class SiteController extends BaseController
             return '<div class="a-148">Спасибо за вашу заявку!</div>';
         }
 
-        return $this->render('index');
+        $offices = Office::find()->where(['publish' => 1])->all();
+        $partners = Partner::find()->where(['publish' => 1])->all();
+
+        return $this->render('index', compact('offices', 'partners'));
     }
 
     public function actionHot() {
@@ -403,7 +407,7 @@ class SiteController extends BaseController
             $model = new Tour;
             $model->name = $arr['name'];
             $model->phone = $arr['phone'];
-            $model->city = $arr['city'];
+            $model->cities = $arr['cities'];
             $model->type = $arr['tour'];
             $model->insert();
             */
@@ -427,7 +431,7 @@ class SiteController extends BaseController
                             <td colspan="2">Телефон</td><td>'.$arr['phone'].'</td>
                         </tr>
                         <tr>
-                            <td colspan="2">Город</td><td>'.$arr['city'].'</td>
+                            <td colspan="2">Город</td><td>'.$arr['cities'].'</td>
                         </tr>
                         <tr>
                             <td colspan="2">Тур</td><td>'.$arr['tour'].'</td>
@@ -449,7 +453,7 @@ class SiteController extends BaseController
             $headers .= "Bcc: web@chemodan.kz \r\n";
             mail($to,$subject,$message,$headers);
             
-            /*$leads = htmlspecialchars(json_encode(array('url'=>$arr['url'],'comment'=>'Запрос город: '.$arr['city'].' - Тур: '.$arr['tour'],'phone'=>$arr['phone'],'type'=>0,'name'=>$arr['name'],'email'=>'')));
+            /*$leads = htmlspecialchars(json_encode(array('url'=>$arr['url'],'comment'=>'Запрос город: '.$arr['cities'].' - Тур: '.$arr['tour'],'phone'=>$arr['phone'],'type'=>0,'name'=>$arr['name'],'email'=>'')));
             
             $ch = curl_init();
             curl_setopt($ch, CURLOPT_URL,"https://www.chmd-afina.kz/ajax.php");
@@ -640,7 +644,7 @@ class SiteController extends BaseController
                 
                 if (!array_key_exists($name, $ALL)) $ALL[$name] = [];
                 
-                $ALL[$name][] = ['booking'=>$val[11][0][0],'to'=>$to_name[ $GET['to'] ],'room'=>$val[8][1],'from'=>$from_name[ $GET['from'] ],'name'=>$name,'day'=>$val[3],'sum'=>$val[10]['total'].'$','child'=>$child,'adult'=>$adult,'people'=>(sizeof($people)>0?implode(', ', array_reverse($people)):''),'url'=>$val[6][2],'star'=>$star,'date'=>$val[4],'city'=>$val[5][1],'meal'=>$val[7][1],'operator'=>'tez-tour'];
+                $ALL[$name][] = ['booking'=>$val[11][0][0],'to'=>$to_name[ $GET['to'] ],'room'=>$val[8][1],'from'=>$from_name[ $GET['from'] ],'name'=>$name,'day'=>$val[3],'sum'=>$val[10]['total'].'$','child'=>$child,'adult'=>$adult,'people'=>(sizeof($people)>0?implode(', ', array_reverse($people)):''),'url'=>$val[6][2],'star'=>$star,'date'=>$val[4],'cities'=>$val[5][1],'meal'=>$val[7][1],'operator'=>'tez-tour'];
                 
                 if (sizeof($people)>0) $people = implode(', ', array_reverse($people)); else $people = '';
                 
@@ -677,7 +681,7 @@ class SiteController extends BaseController
                         $adult = $val[$i]['adult'];
                         $people = $val[$i]['people'];
                         $date = $val[$i]['date'];
-                        $city = $val[$i]['city'];
+                        $city = $val[$i]['cities'];
                         $meal = $val[$i]['meal'];
                         $url = $val[$i]['url'];
                         $ONE = $val[$i];
@@ -753,9 +757,9 @@ class SiteController extends BaseController
             curl_setopt($CURL, CURLOPT_URL, $URL);
             curl_setopt($CURL, CURLOPT_RETURNTRANSFER, true);
             
-            //$START_PLACE['teztour'][ $INFO['from_country'][0] ]['city'][ $INFO['from_country'][1] ]
+            //$START_PLACE['teztour'][ $INFO['from_country'][0] ]['cities'][ $INFO['from_country'][1] ]
             
-            $URL = 'http://search.tez-tour.com/tariffsearch/getResult?accommodationId=2&after='.$_POST['date']['from'].'&before='.$_POST['date']['to'].'&cityId='.$START_PLACE['teztour'][ $_POST['from']['country'] ]['city'][ $_POST['from']['city'] ].'&countryId='.$START_PLACE['teztour'][ $_POST['to']['country'] ]['code'].'&cy=5561&hotelClassBetter=true&hotelClassId=2569&hotelInStop=false&locale=ru&nightsMax='.($_POST['range']+2).'&nightsMin='.$_POST['range'].'&noTicketsFrom=false&noTicketsTo=false&priceMax=100000&priceMin=0&rAndBBetter=true&formatResult=true&xml=false'.$child;
+            $URL = 'http://search.tez-tour.com/tariffsearch/getResult?accommodationId=2&after='.$_POST['date']['from'].'&before='.$_POST['date']['to'].'&cityId='.$START_PLACE['teztour'][ $_POST['from']['country'] ]['cities'][ $_POST['from']['cities'] ].'&countryId='.$START_PLACE['teztour'][ $_POST['to']['country'] ]['code'].'&cy=5561&hotelClassBetter=true&hotelClassId=2569&hotelInStop=false&locale=ru&nightsMax='.($_POST['range']+2).'&nightsMin='.$_POST['range'].'&noTicketsFrom=false&noTicketsTo=false&priceMax=100000&priceMin=0&rAndBBetter=true&formatResult=true&xml=false'.$child;
             */
             
             $START = explode('/',$GET['start-date']);
@@ -901,7 +905,7 @@ class SiteController extends BaseController
         }
         */
 
-        return $this->render('office');
+        return $this->render('offices');
     }
     public function actionTours() {
         $request = Yii::$app->request;

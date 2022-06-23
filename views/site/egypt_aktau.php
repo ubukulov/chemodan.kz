@@ -6,7 +6,7 @@ $this->title = 'Горящие туры в Египет из Актау - Тур
 ?>
 <div class="a-185 a-185d"><div class="a-95 a-89d"></div></div><div class="a-86a">
 	<h1 class="a-94" style="margin-bottom: 30px;">ГОРЯЩИЕ ТУРЫ В ЕГИПЕТ ИЗ АКТАУ</h1>
-<div class="a-423" id="egypt"><?php echo HotTours::widget(['type'=>1,'country'=>9,'city'=>2]);?></div>
+<div class="a-423" id="egypt"><?php echo HotTours::widget(['type'=>1,'country'=>9,'cities'=>2]);?></div>
 <div class="a-290" style="margin-top: 50px;">	
 	<iframe id="triphacker_fr" src="https://triphacker.kz/widget" style="border:0; height: 500px; border: 0; width: 100%;"></iframe>
 </div>

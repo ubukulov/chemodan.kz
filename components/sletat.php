@@ -15,7 +15,7 @@ class sletat extends Widget {
 		$out = '
 		<script type="text/javascript" src="https://ui.sletat.ru/module-5.0/app.js" charset="utf-8"></script>
 <script type="text/javascript">sletat.createModule5(\'Search\', {
-  city              : '.$this->city.',
+  cities              : '.$this->city.',
   '.$country_.'
   files             : ["https://ui.sletat.ru/module-5.0/theme/dream_dec2015.min.css"],
   currency          : "KZT",

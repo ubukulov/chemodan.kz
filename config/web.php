@@ -100,8 +100,8 @@ $config = [
                     'defaults' => ['alias' => '']
                 ],
                 [
-                    'pattern' => 'office/<alias>',
-                    'route' => 'office/offices',
+                    'pattern' => 'offices/<alias>',
+                    'route' => 'offices/offices',
                     'defaults' => ['alias' => '']
                 ],
                 [

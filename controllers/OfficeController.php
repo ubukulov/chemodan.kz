@@ -21,7 +21,7 @@ class OfficeController extends BaseController
         $alias = $request->get('alias');
 
         if(empty($alias)) {
-            $alias = 'office';
+            $alias = 'offices';
         }
 
         $model = Menu::find()->where([
