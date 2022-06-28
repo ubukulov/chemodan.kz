@@ -7,7 +7,11 @@ use app\models\Comments;
 class ListCommentWidget extends Widget {
 	public function run() {
 		$monthname = ['','Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'];
-		$SQL = Comments::find()->orderBy('tm DESC')->asArray()->all();
+		$SQL = Comments::find()
+            ->where(['ss' => '0'])
+            ->orderBy('tm DESC')
+            ->asArray()
+            ->all();
 		$html = '';
 		foreach ($SQL as $key => $value) {
 		    $imd = json_decode($value['img'],true);

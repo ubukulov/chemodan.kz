@@ -27,7 +27,8 @@ use app\controllers\admin\{
     CityController,
     OfficeController,
     PartnerController,
-    SSettingController
+    SSettingController,
+    ReviewsController
 };
 use app\controllers\admin\album\{
     ImageAlbumController,
@@ -59,6 +60,7 @@ return [
                 'partners' => PartnerController::class,
                 'ssettings' => SSettingController::class,
                 'positions' => PositionController::class,
+                'reviews' => ReviewsController::class,
 //                'pages' => PageController::class,
 //                'categories' => CategoryController::class,
 //                'articles' => ArticleController::class,

@@ -80,6 +80,12 @@ return [
             'url' => '/admin/positions',
             'active' => $controllerId == 'positions'
         ],
+        'reviews' => [
+            'title' => Yii::t('reviews', 'Reviews'),
+            'icon' => 'fa fa-user-circle-o',
+            'url' => '/admin/reviews',
+            'active' => $controllerId == 'reviews'
+        ],
 //        'pages' => [
 //            'title' => Yii::t('pages', 'Pages'),
 //            'icon' => 'fa fa-file',
