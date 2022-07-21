@@ -19,7 +19,12 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\SerialColumn'],
             'id',
             'name',
-            'email:email',
+            //'email:email',
+            [
+                'attribute' => 'email',
+                'format' => 'raw',
+                'label' => 'Email/Телефон',
+            ],
             'comment:ntext',
             [
                 'attribute' => 'ss',
