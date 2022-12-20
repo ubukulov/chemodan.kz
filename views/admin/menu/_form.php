@@ -28,6 +28,7 @@ use Itstructure\FieldWidgets\{Fields, FieldType};
                 'type' => FieldType::FIELD_TYPE_CKEDITOR_ADMIN,
                 'label' => Yii::t('app', 'Content'),
                 'preset' => 'full',
+                //'customConfig' => '/js/config_ckeditor.js',
                 'options' => [
                     'filebrowserBrowseUrl' => '/ckfinder/ckfinder.html',
                     //'filebrowserImageBrowseUrl' => '/ckfinder/ckfinder.html?type=Images',
@@ -35,7 +36,7 @@ use Itstructure\FieldWidgets\{Fields, FieldType};
                     'filebrowserImageUploadUrl' => '/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images',
                     'filebrowserWindowWidth' => '1000',
                     'filebrowserWindowHeight' => '700',
-                    'extraPlugins' => 'pbckcode',
+                    'extraPlugins' => 'colorbutton',
                     'toolbarGroups' => [
                         ['name' => 'pbckcode']
                     ],
