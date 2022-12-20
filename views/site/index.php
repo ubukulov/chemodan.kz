@@ -39,6 +39,17 @@ $settings = $this->params['settings'];
 
 <div class="a-440" onclick="return page.requestClient();">Подберите мне тур</div>
 
+<div class="a-39" style="padding: 0px 100px;">
+    <div style="margin-top: 20px;" class="tv-search-form tv-moduleid-9955275"></div>
+    <script type="text/javascript" src="//tourvisor.ru/module/init.js"></script>
+</div>
+
+<div class="a-39" style="overflow: inherit; padding: 0px 100px;">
+    <div class="a-40"><span>Горящие предложение</span></div>
+    <div class="tv-hot-tours tv-moduleid-9954835"></div>
+    <script type="text/javascript" src="//tourvisor.ru/module/init.js"></script>
+</div>
+
 <div class="a-4">
     <div class="a-6">
 
