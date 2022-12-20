@@ -90,6 +90,11 @@ $config = [
                     'defaults' => ['open' => '']
                 ],
                 [
+                    'pattern' => 'upload/<open>',
+                    'route' => 'site/upload',
+                    'defaults' => ['open' => '']
+                ],
+                [
                     'pattern' => 'services/<alias>',
                     'route' => 'services/services',
                     'defaults' => ['alias' => '']

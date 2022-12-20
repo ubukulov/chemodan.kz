@@ -226,6 +226,7 @@ class SiteController extends BaseController
         }
         return '';
     }
+
     public function actionUpload() {
         if (Yii::$app->request->isAjax) {
             $arr = Yii::$app->request->post();
@@ -234,46 +235,42 @@ class SiteController extends BaseController
             $date = time();
             if (array_key_exists('file_0', $_FILES)) {
                 $model->imageFile = UploadedFile::getInstanceByName('file_0');
-                $img_list[] = 'https://chemodan.kz/web/'.$model->upload($date.'-0');
+                $img_list[] = '/'.$model->upload($date.'-0');
             }
 
             if (array_key_exists('file_1', $_FILES)) {
                 $model->imageFile = UploadedFile::getInstanceByName('file_1');
-                $img_list[] = 'https://chemodan.kz/web/'.$model->upload($date.'-1');
+                $img_list[] = '/'.$model->upload($date.'-1');
             }
 
             if (array_key_exists('file_2', $_FILES)) {
                 $model->imageFile = UploadedFile::getInstanceByName('file_2');
-                $img_list[] = 'https://chemodan.kz/web/'.$model->upload($date.'-2');
+                $img_list[] = '/'.$model->upload($date.'-2');
             }
 
             if (array_key_exists('file_3', $_FILES)) {
                 $model->imageFile = UploadedFile::getInstanceByName('file_3');
-                $img_list[] = 'https://chemodan.kz/web/'.$model->upload($date.'-3');
+                $img_list[] = '/'.$model->upload($date.'-3');
             }
 
             if (array_key_exists('file_4', $_FILES)) {
                 $model->imageFile = UploadedFile::getInstanceByName('file_4');
-                $img_list[] = 'https://chemodan.kz/web/'.$model->upload($date.'-4');
+                $img_list[] = '/'.$model->upload($date.'-4');
             }
-            //exit("https://afinadb.kz/ajax.php?comment=".json_encode($arr));
             
             $arr['img'] = $img_list;
-            //exit("https://www.afinadb.kz/ajax.php?comment=".urlencode(json_encode($arr)));
-            $arr = json_encode($arr);
 
-            $ch = curl_init();
-            curl_setopt($ch, CURLOPT_URL,'https://www.afinadb.kz/ajax.php');
-            curl_setopt($ch, CURLOPT_POST, 1);
-            curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query(['comment'=>$arr]));
-            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-            //curl_setopt($c, CURLOPT_HTTPHEADER, array("Content-type: multipart/form-data"));
-            $result = curl_exec($ch);
-            exit($result);
-            // Close cURL session handle
-            curl_close($ch);
-            return $result;
+            $data = json_decode($arr['main']);
 
+            $comment = new Comments();
+            $comment->name = $data->name;
+            $comment->email = $data->email;
+            $comment->comment = $data->comment;
+            $comment->ss = '1';
+            $comment->img = json_encode($arr['img']);
+            $comment->save();
+
+            return 'success';
         }
     }
 

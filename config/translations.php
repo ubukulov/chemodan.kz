@@ -151,4 +151,10 @@ return [
             'portfolio' => 'ssettings.php',
         ],
     ],
+    'reviews*' => [
+        'class' => 'yii\i18n\PhpMessageSource',
+        'fileMap' => [
+            'portfolio' => 'reviews.php',
+        ],
+    ],
 ];
